@@ -1,0 +1,22 @@
+const productos = [
+    { titulo: "AFTER HOURS", artista: "THE WEEKND", precio: 850, imagen: "./imagenes/albums/after-hours.jpg" },
+    { titulo: "RANDOM ACCESS MEMORIES", artista: "DAFT PUNK", precio: 920, imagen: "./imagenes/albums/ram.jpg" },
+    { titulo: "LUST FOR LIFE", artista: "LANA DEL REY", precio: 780, imagen: "./imagenes/albums/lust-for-life.jpg" },
+    { titulo: "ABBEY ROAD", artista: "THE BEATLES", precio: 990, imagen: "./imagenes/albums/abbey-road.jpg" },
+    { titulo: "AM", artista: "ARCTIC MONKEYS", precio: 750, imagen: "./imagenes/albums/am.jpg" },
+    { titulo: "GTA SAN ANDREAS OST", artista: "VARIOS", precio: 700, imagen: "./imagenes/albums/gta.jpg" },
+    { titulo: "IN UTERO", artista: "NIRVANA", precio: 820, imagen: "./imagenes/albums/in-utero.jpg" },
+    { titulo: "STARBOY", artista: "THE WEEKND", precio: 850, imagen: "./imagenes/albums/starboy.jpg" },
+    { titulo: "THRILLER", artista: "MICHAEL JACKSON", precio: 950, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg" },
+    { titulo: "THE DARK SIDE OF THE MOON", artista: "PINK FLOYD", precio: 1100, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/76/b0/3e76b0e3-762b-2286-a019-8afb19cee541/886445635829.jpg/600x600bb.jpg" },
+    { titulo: "RUMOURS", artista: "FLEETWOOD MAC", precio: 890, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/600x600bb.jpg" },
+    { titulo: "BLONDE", artista: "FRANK OCEAN", precio: 980, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/600x600bb.jpg" },
+    { titulo: "DAMN.", artista: "KENDRICK LAMAR", precio: 870, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg" },
+    { titulo: "HAPPIER THAN EVER", artista: "BILLIE EILISH", precio: 860, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/b7/6d/02b76dd3-4006-bc65-9f33-33b70a95222a/21UMGIM36684.rgb.jpg/600x600bb.jpg" },
+    { titulo: "UN VERANO SIN TI", artista: "BAD BUNNY", precio: 900, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/600x600bb.jpg" },
+    { titulo: "OK COMPUTER", artista: "RADIOHEAD", precio: 880, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg" },
+    { titulo: "CURRENTS", artista: "TAME IMPALA", precio: 840, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/600x600bb.jpg" },
+    { titulo: "A NIGHT AT THE OPERA", artista: "QUEEN", precio: 960, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dd/86/92/dd86925d-484d-8ee7-3985-ef3264214269/602527644264.jpg/600x600bb.jpg" },
+    { titulo: "DEMON DAYS", artista: "GORILLAZ", precio: 820, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/600x600bb.jpg" },
+    { titulo: "CANCIÓN ANIMAL", artista: "SODA STEREO", precio: 790, imagen: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/60/18/68/601868f7-68ba-9416-af42-b26b2f68035f/mzi.qyqtvoxs.jpg/600x600bb.jpg" }
+];

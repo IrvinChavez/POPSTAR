@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>POPSTAR | Tienda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./estilos/tienda.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a href="./index.html" class="logo"><span>✦</span> POPSTAR <span>✦</span></a>
+
+        <nav class="navegacion">
+
+            <a href="./index.html">INICIO</a>
+
+            <a href="./tienda.html" class="activo">TIENDA</a>
+
+            <a href="./contacto.html">CONTACTO</a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <button class="icono" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <span class="separador"></span>
+
+            <a href="./carrito.html" class="icono carrito" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="contador">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="tienda-hero">
+
+            <h1 class="title"><span>✦</span> TIENDA <span>✦</span></h1>
+
+            <p class="subtitle">VINILOS QUE CUENTAN HISTORIAS</p>
+
+            <div class="linea"></div>
+
+            <div class="carousel-container">
+
+                <button class="nav-btn prev" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel">
+                </div>
+
+                <button class="nav-btn next" aria-label="Siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h2 id="album-title">AFTER HOURS</h2>
+
+                <p id="album-artist">THE WEEKND</p>
+
+                <p id="album-price">$850 MXN</p>
+
+                <button id="add-to-cart" class="btn-buy">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    AGREGAR AL CARRITO
+                </button>
+
+                <div class="indicators"></div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <script src="./js/productos.js"></script>
+    <script src="./js/tienda.js"></script>
+
+</body>
+
+</html>

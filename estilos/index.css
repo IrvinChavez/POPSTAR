@@ -1,0 +1,83 @@
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../imagenes/imgP.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+.general {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contenido {
+    position: absolute;
+    top: 34%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+}
+
+.contenido h1 {
+    font-size: clamp(4rem, 10vw, 9rem);
+    font-weight: 1000;
+    letter-spacing: clamp(4px, 1vw,12px);
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    margin-bottom: 35px;
+}
+
+
+.contenido h1 span {
+    color: #c9232b;
+    font-size: 0.35em;
+    vertical-align: top;
+    margin-left: 8px;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.navegacion a:hover {
+    color: #d52b32;
+}
+
+.navegacion span {
+    color: #d52b32;
+    font-size: 1.2rem;
+}

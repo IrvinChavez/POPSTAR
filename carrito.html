@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>POPSTAR | Carrito</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./estilos/carrito.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a href="./index.html" class="logo"><span>✦</span> POPSTAR</a>
+
+        <nav class="navegacion">
+
+            <a href="./index.html">INICIO</a>
+
+            <a href="./tienda.html">TIENDA</a>
+
+            <a href="./carrito.html" class="activo">CARRITO</a>
+
+            <a href="./contacto.html">CONTACTO</a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <button class="icono" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <span class="separador"></span>
+
+            <a href="./carrito.html" class="icono" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="contador">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="carrito-hero">
+
+            <h1 class="title"><span>✦</span> CARRITO <span>✦</span></h1>
+
+            <p class="subtitle">TUS VINILOS, MÁS CERCA DE CASA</p>
+
+            <div class="linea"></div>
+
+            <div id="carrito-contenido" class="carrito-contenido">
+
+                <div class="panel carrito-lista">
+
+                    <div class="lista-encabezado">
+                        <h2>PRODUCTOS (<span id="total-productos">0</span>)</h2>
+                        <span>PRECIO</span>
+                        <span>CANTIDAD</span>
+                        <span>SUBTOTAL</span>
+                    </div>
+
+                    <ul id="lista-productos" class="lista-productos">
+                    </ul>
+
+                    <a href="./tienda.html" class="seguir-comprando">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        SEGUIR COMPRANDO
+                    </a>
+
+                </div>
+
+                <aside class="panel resumen">
+
+                    <h2>RESUMEN DEL PEDIDO</h2>
+
+                    <div class="resumen-fila">
+                        <span>Subtotal (<span id="resumen-articulos">0</span> productos)</span>
+                        <span id="resumen-subtotal">$0 MXN</span>
+                    </div>
+
+                    <div class="resumen-fila">
+                        <span>Envío</span>
+                        <span id="resumen-envio">$0 MXN</span>
+                    </div>
+
+                    <div class="resumen-fila total">
+                        <span>Total</span>
+                        <span id="resumen-total">$0 MXN</span>
+                    </div>
+
+                    <button id="finalizar-compra" class="btn-pago">
+                        <i class="fa-solid fa-lock"></i>
+                        PROCEDER AL PAGO
+                    </button>
+
+                    <div class="metodos-pago">
+                        <p>MÉTODOS DE PAGO</p>
+                        <div class="metodos-iconos">
+                            <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                            <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                            <i class="fa-brands fa-cc-amex" title="American Express"></i>
+                            <span class="oxxo" title="OXXO">OXXO</span>
+                        </div>
+                    </div>
+
+                    <ul class="garantias">
+                        <li>
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <h3>Envíos a todo México</h3>
+                                <p>3-7 días hábiles</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <h3>Compra segura</h3>
+                                <p>Tus datos protegidos</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-box-open"></i>
+                            <div>
+                                <h3>Empaque especializado</h3>
+                                <p>Tu vinilo llega en perfecto estado</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </aside>
+
+            </div>
+
+            <div id="carrito-vacio" class="panel mensaje-estado oculto">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <h2>TU CARRITO ESTÁ VACÍO</h2>
+                <p>Encuentra el vinilo que le falta a tu colección</p>
+                <a href="./tienda.html" class="btn-pago">
+                    <i class="fa-solid fa-store"></i>
+                    IR A LA TIENDA
+                </a>
+            </div>
+
+            <div id="compra-exitosa" class="panel mensaje-estado oculto">
+                <i class="fa-solid fa-circle-check"></i>
+                <h2>¡GRACIAS POR TU COMPRA!</h2>
+                <p>Tus vinilos ya van en camino</p>
+                <a href="./tienda.html" class="btn-pago">
+                    <i class="fa-solid fa-store"></i>
+                    VOLVER A LA TIENDA
+                </a>
+            </div>
+
+            <section class="recomendados">
+
+                <div class="recomendados-encabezado">
+                    <h2><span>✦</span> TAMBIÉN TE PUEDE GUSTAR</h2>
+                    <a href="./tienda.html">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="recomendados-carrusel">
+
+                    <button class="flecha flecha-prev" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <ul id="lista-recomendados" class="lista-recomendados">
+                    </ul>
+
+                    <button class="flecha flecha-next" aria-label="Siguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="./js/productos.js"></script>
+    <script src="./js/carrito.js"></script>
+
+</body>
+
+</html>
