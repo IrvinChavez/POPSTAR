@@ -28,7 +28,7 @@ body {
     background-color: #0a0000;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.75)),
-        url("../imagenes/carritoI.png");
+        url("../imagenes/carritoI.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
