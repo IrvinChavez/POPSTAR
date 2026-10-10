@@ -413,3 +413,91 @@ main {
         padding: 24px 16px;
     }
 }
+
+@media (max-width: 480px) {
+    .encabezado {
+        gap: 12px;
+        padding: 14px 12px;
+    }
+
+    .logo {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+
+    .navegacion {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .navegacion a {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+
+    .icono {
+        font-size: 1rem;
+    }
+
+    .title {
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        letter-spacing: 2px;
+    }
+
+    .carousel-container {
+        padding: 0 8px;
+    }
+
+    .carousel {
+        height: 220px;
+    }
+
+    .card {
+        width: 140px;
+    }
+
+    .nav-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .product-info {
+        margin-top: 6px;
+    }
+
+    #album-title {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+
+    #album-artist {
+        letter-spacing: 2px;
+    }
+
+    .btn-buy {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 16px;
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+
+    .indicators {
+        margin-top: 18px;
+    }
+}

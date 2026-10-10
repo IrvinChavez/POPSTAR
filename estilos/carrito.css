@@ -850,3 +850,88 @@ main {
         flex-basis: 82%;
     }
 }
+
+@media (max-width: 480px) {
+    .encabezado {
+        gap: 12px;
+        padding: 14px 12px;
+    }
+
+    .logo {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+
+    .navegacion {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .navegacion a {
+        font-size: 0.66rem;
+        letter-spacing: 1px;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+
+    .carrito-hero {
+        padding: 10px 12px 30px;
+    }
+
+    .title {
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        letter-spacing: 2px;
+    }
+
+    .carrito-lista,
+    .resumen {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .producto {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "info"
+            "cantidad"
+            "subtotal";
+    }
+
+    .cantidad {
+        margin-left: 0;
+        justify-self: start;
+    }
+
+    .subtotal {
+        text-align: left;
+    }
+
+    .btn-pago {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .recomendados-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recomendado {
+        flex-basis: 88%;
+        min-width: 0;
+    }
+
+    .mensaje-estado {
+        padding: 30px 18px;
+    }
+
+    .mensaje-estado h2 {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+}
