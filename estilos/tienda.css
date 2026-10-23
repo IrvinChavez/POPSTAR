@@ -65,6 +65,7 @@ button {
 
 .navegacion {
     display: flex;
+    align-items: center;
     gap: clamp(20px, 4vw, 50px);
 }
 
@@ -77,6 +78,29 @@ button {
     letter-spacing: 2px;
     padding: 6px 0;
     transition: color 0.3s ease;
+}
+
+.navegacion .boton-cuenta {
+    position: relative;
+    padding: 6px 0;
+    color: var(--blanco);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navegacion .boton-cuenta::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    height: 2px;
+    background: var(--rojo);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .navegacion a::after {
@@ -92,12 +116,14 @@ button {
 }
 
 .navegacion a:hover,
-.navegacion a.activo {
+.navegacion a.activo,
+.navegacion .boton-cuenta:hover {
     color: var(--rojo);
 }
 
 .navegacion a:hover::after,
-.navegacion a.activo::after {
+.navegacion a.activo::after,
+.navegacion .boton-cuenta:hover::after {
     transform: scaleX(1);
 }
 
@@ -341,6 +367,18 @@ main {
     color: var(--rojo);
 }
 
+.etiqueta-descuento-miembro {
+    margin-top: 0.3rem;
+    color: #48d18a;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.etiqueta-descuento-miembro[hidden] {
+    display: none;
+}
+
 .btn-buy {
     margin-top: 14px;
     display: flex;
@@ -361,27 +399,6 @@ main {
     background: var(--rojo);
     color: var(--blanco);
     box-shadow: 0 0 25px rgba(213, 43, 50, 0.7);
-}
-
-.indicators {
-    margin-top: 22px;
-    display: flex;
-    gap: 12px;
-}
-
-.indicators button {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    border: 1.5px solid var(--gris);
-    background: transparent;
-    transition: all 0.3s ease;
-}
-
-.indicators button.active {
-    background: var(--rojo);
-    border-color: var(--rojo);
-    box-shadow: 0 0 8px var(--rojo);
 }
 
 @media (max-width: 900px) {
@@ -497,7 +514,4 @@ main {
         letter-spacing: 1.5px;
     }
 
-    .indicators {
-        margin-top: 18px;
-    }
 }

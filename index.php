@@ -19,15 +19,15 @@
 
             <nav class="navegacion">
 
-                <a href="./index.html">INICIO</a>
+                <a href="./index.php">INICIO</a>
 
                 <span>•</span>
 
-                <a href="./tienda.html">TIENDA</a>
+                <a href="./tienda.php">TIENDA</a>
 
                 <span>•</span>
 
-                <a href="./contacto.html">CONTACTO</a>
+                <a href="./contacto.php">CONTACTO</a>
 
             </nav>
 

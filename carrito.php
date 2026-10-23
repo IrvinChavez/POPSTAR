@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/cuenta-controller.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,23 +16,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="./estilos/carrito.css">
+    <link rel="stylesheet" href="./estilos/cuenta.css">
 </head>
 
-<body>
+<body data-descuento-miembro="<?= $cuentaActual ? '10' : '0' ?>">
 
     <header class="encabezado">
 
-        <a href="./index.html" class="logo"><span>✦</span> POPSTAR</a>
+        <a href="./index.php" class="logo"><span>✦</span> POPSTAR</a>
 
         <nav class="navegacion">
 
-            <a href="./index.html">INICIO</a>
+            <a href="./index.php">INICIO</a>
 
-            <a href="./tienda.html">TIENDA</a>
+            <a href="./tienda.php">TIENDA</a>
 
-            <a href="./carrito.html" class="activo">CARRITO</a>
+            <a href="./carrito.php" class="activo">CARRITO</a>
 
-            <a href="./contacto.html">CONTACTO</a>
+            <a href="./contacto.php">CONTACTO</a>
+
+            <?php require __DIR__ . '/includes/boton-cuenta.php'; ?>
 
         </nav>
 
@@ -43,7 +47,7 @@
 
             <span class="separador"></span>
 
-            <a href="./carrito.html" class="icono" aria-label="Carrito">
+            <a href="./carrito.php" class="icono" aria-label="Carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cart-count" class="contador">0</span>
             </a>
@@ -76,7 +80,7 @@
                     <ul id="lista-productos" class="lista-productos">
                     </ul>
 
-                    <a href="./tienda.html" class="seguir-comprando">
+                    <a href="./tienda.php" class="seguir-comprando">
                         <i class="fa-solid fa-arrow-left"></i>
                         SEGUIR COMPRANDO
                     </a>
@@ -90,6 +94,11 @@
                     <div class="resumen-fila">
                         <span>Subtotal (<span id="resumen-articulos">0</span> productos)</span>
                         <span id="resumen-subtotal">$0 MXN</span>
+                    </div>
+
+                    <div class="resumen-fila" id="fila-descuento-miembro" hidden>
+                        <span>Descuento de miembro (10%)</span>
+                        <span id="resumen-descuento-miembro">-$0 MXN</span>
                     </div>
 
                     <div class="resumen-fila">
@@ -149,7 +158,7 @@
                 <i class="fa-solid fa-record-vinyl"></i>
                 <h2>TU CARRITO ESTÁ VACÍO</h2>
                 <p>Encuentra el vinilo que le falta a tu colección</p>
-                <a href="./tienda.html" class="btn-pago">
+                <a href="./tienda.php" class="btn-pago">
                     <i class="fa-solid fa-store"></i>
                     IR A LA TIENDA
                 </a>
@@ -159,7 +168,7 @@
                 <i class="fa-solid fa-circle-check"></i>
                 <h2>¡GRACIAS POR TU COMPRA!</h2>
                 <p>Tus vinilos ya van en camino</p>
-                <a href="./tienda.html" class="btn-pago">
+                <a href="./tienda.php" class="btn-pago">
                     <i class="fa-solid fa-store"></i>
                     VOLVER A LA TIENDA
                 </a>
@@ -169,7 +178,7 @@
 
                 <div class="recomendados-encabezado">
                     <h2><span>✦</span> TAMBIÉN TE PUEDE GUSTAR</h2>
-                    <a href="./tienda.html">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="./tienda.php">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="recomendados-carrusel">
@@ -193,8 +202,10 @@
 
     </main>
 
+    <?php require __DIR__ . '/includes/modal-cuenta.php'; ?>
     <script src="./js/productos.js"></script>
     <script src="./js/carrito.js"></script>
+    <script src="./js/cuenta.js"></script>
 
 </body>
 

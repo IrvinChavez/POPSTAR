@@ -82,6 +82,11 @@ body {
     font-size: 1.2rem;
 }
 
+.navegacion .boton-cuenta {
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 480px) {
     .general {
         display: flex;

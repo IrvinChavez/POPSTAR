@@ -1,13 +1,13 @@
 const carousel = document.querySelector(".carousel");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
-const indicators = document.querySelector(".indicators");
-
 const albumTitle = document.getElementById("album-title");
 const albumArtist = document.getElementById("album-artist");
 const albumPrice = document.getElementById("album-price");
 const addToCartBtn = document.getElementById("add-to-cart");
 const cartCount = document.getElementById("cart-count");
+const etiquetaDescuentoMiembro = document.getElementById("etiqueta-descuento-miembro");
+const porcentajeDescuentoMiembro = Number(document.body.dataset.descuentoMiembro || 0);
 
 let currentIndex = 0;
 
@@ -41,15 +41,10 @@ productos.forEach((producto, i) => {
     card.addEventListener("click", () => irA(i));
     carousel.appendChild(card);
 
-    const punto = document.createElement("button");
-    punto.setAttribute("aria-label", `Ver ${producto.titulo}`);
-    punto.addEventListener("click", () => irA(i));
-    indicators.appendChild(punto);
 });
 
 function updateCarousel() {
     const cards = document.querySelectorAll(".card");
-    const puntos = document.querySelectorAll(".indicators button");
     const total = productos.length;
     const separacion = carousel.offsetWidth / 7;
 
@@ -69,13 +64,19 @@ function updateCarousel() {
         card.style.pointerEvents = distancia > 3 ? "none" : "auto";
 
         card.classList.toggle("active", offset === 0);
-        puntos[i].classList.toggle("active", offset === 0);
     });
 
     const actual = productos[currentIndex];
     albumTitle.textContent = actual.titulo;
     albumArtist.textContent = actual.artista;
-    albumPrice.textContent = `$${actual.precio} MXN`;
+    if (porcentajeDescuentoMiembro > 0) {
+        const precioMiembro = Math.round(actual.precio * (1 - porcentajeDescuentoMiembro / 100));
+        albumPrice.innerHTML = `<del>$${actual.precio} MXN</del> <strong>$${precioMiembro} MXN</strong>`;
+        etiquetaDescuentoMiembro.hidden = false;
+    } else {
+        albumPrice.textContent = `$${actual.precio} MXN`;
+        etiquetaDescuentoMiembro.hidden = true;
+    }
 }
 
 function irA(i) {

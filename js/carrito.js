@@ -13,6 +13,9 @@ const resumenArticulos = document.getElementById("resumen-articulos");
 const resumenSubtotal = document.getElementById("resumen-subtotal");
 const resumenEnvio = document.getElementById("resumen-envio");
 const resumenTotal = document.getElementById("resumen-total");
+const filaDescuentoMiembro = document.getElementById("fila-descuento-miembro");
+const resumenDescuentoMiembro = document.getElementById("resumen-descuento-miembro");
+const porcentajeDescuentoMiembro = Number(document.body.dataset.descuentoMiembro || 0);
 
 const finalizarBtn = document.getElementById("finalizar-compra");
 const flechaPrev = document.querySelector(".flecha-prev");
@@ -37,6 +40,10 @@ let carrito = leerCarrito();
 
 function formatoPrecio(cantidad) {
     return `$${cantidad.toLocaleString("es-MX")} MXN`;
+}
+
+function precioConDescuento(precio) {
+    return Math.round(precio * (1 - porcentajeDescuentoMiembro / 100) * 100) / 100;
 }
 
 function tipoTitulo(texto) {
@@ -77,9 +84,9 @@ function crearProducto(producto, i) {
 
     li.querySelector("h3").textContent = producto.titulo;
     li.querySelector(".artista").textContent = tipoTitulo(producto.artista);
-    li.querySelector(".precio").textContent = formatoPrecio(producto.precio);
+    li.querySelector(".precio").textContent = formatoPrecio(precioConDescuento(producto.precio));
     li.querySelector(".cantidad span").textContent = producto.cantidad;
-    li.querySelector(".subtotal").textContent = formatoPrecio(producto.precio * producto.cantidad);
+    li.querySelector(".subtotal").textContent = formatoPrecio(precioConDescuento(producto.precio) * producto.cantidad);
 
     li.querySelector(".menos").addEventListener("click", () => cambiarCantidad(i, -1));
     li.querySelector(".mas").addEventListener("click", () => cambiarCantidad(i, 1));
@@ -111,7 +118,7 @@ function crearRecomendado(producto) {
     li.querySelector("h3").textContent = producto.titulo;
     li.querySelector("h3").title = producto.titulo;
     li.querySelector(".artista").textContent = tipoTitulo(producto.artista);
-    li.querySelector(".precio-reco").textContent = formatoPrecio(producto.precio);
+    li.querySelector(".precio-reco").textContent = formatoPrecio(precioConDescuento(producto.precio));
 
     li.querySelector(".btn-agregar").addEventListener("click", (e) => {
         e.currentTarget.disabled = true;
@@ -146,13 +153,17 @@ function mostrarCarrito() {
         listaProductos.appendChild(crearProducto(producto, i));
     });
 
-    const subtotal = carrito.reduce((suma, p) => suma + p.precio * p.cantidad, 0);
+    const subtotalOriginal = carrito.reduce((suma, p) => suma + p.precio * p.cantidad, 0);
+    const subtotal = carrito.reduce((suma, p) => suma + precioConDescuento(p.precio) * p.cantidad, 0);
+    const descuentoMiembro = subtotalOriginal - subtotal;
 
     totalProductos.textContent = articulos;
     resumenArticulos.textContent = articulos;
-    resumenSubtotal.textContent = formatoPrecio(subtotal);
+    resumenSubtotal.textContent = formatoPrecio(subtotalOriginal);
+    filaDescuentoMiembro.hidden = porcentajeDescuentoMiembro === 0;
+    resumenDescuentoMiembro.textContent = `-${formatoPrecio(descuentoMiembro)}`;
     resumenEnvio.textContent = formatoPrecio(COSTO_ENVIO);
-    resumenTotal.textContent = formatoPrecio(subtotal + COSTO_ENVIO);
+    resumenTotal.textContent = formatoPrecio(subtotalOriginal - descuentoMiembro + COSTO_ENVIO);
 }
 
 function mostrarRecomendados() {

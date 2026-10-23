@@ -48,6 +48,7 @@ body::before {
 
 .navegacion {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -59,8 +60,15 @@ body::before {
     text-transform: uppercase;
 }
 
+.navegacion .boton-cuenta {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
 .navegacion a:hover,
-.navegacion a[aria-current="page"] {
+.navegacion a[aria-current="page"],
+.navegacion .boton-cuenta:hover {
     color: var(--texto);
 }
 
@@ -184,6 +192,16 @@ form {
     gap: 0.6rem;
 }
 
+.notificacion {
+    padding: 0.75rem;
+    border: 1px solid var(--rojo);
+    color: var(--texto);
+}
+
+.notificacion.exito {
+    border-color: #58a878;
+}
+
 label {
     margin-top: 0.35rem;
     font-size: 0.9rem;
@@ -243,6 +261,7 @@ button:hover {
     }
 
     .navegacion {
+        align-items: center;
         gap: 1rem;
     }
 

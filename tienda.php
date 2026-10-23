@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/cuenta-controller.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,21 +16,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="./estilos/tienda.css">
+    <link rel="stylesheet" href="./estilos/cuenta.css">
 </head>
 
-<body>
+<body data-descuento-miembro="<?= $cuentaActual ? '10' : '0' ?>">
 
     <header class="encabezado">
 
-        <a href="./index.html" class="logo"><span>✦</span> POPSTAR <span>✦</span></a>
+        <a href="./index.php" class="logo"><span>✦</span> POPSTAR <span>✦</span></a>
 
         <nav class="navegacion">
 
-            <a href="./index.html">INICIO</a>
+            <a href="./index.php">INICIO</a>
 
-            <a href="./tienda.html" class="activo">TIENDA</a>
+            <a href="./tienda.php" class="activo">TIENDA</a>
 
-            <a href="./contacto.html">CONTACTO</a>
+            <a href="./contacto.php">CONTACTO</a>
+
+            <?php require __DIR__ . '/includes/boton-cuenta.php'; ?>
 
         </nav>
 
@@ -41,7 +45,7 @@
 
             <span class="separador"></span>
 
-            <a href="./carrito.html" class="icono carrito" aria-label="Carrito">
+            <a href="./carrito.php" class="icono carrito" aria-label="Carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cart-count" class="contador">0</span>
             </a>
@@ -82,13 +86,12 @@
                 <p id="album-artist">THE WEEKND</p>
 
                 <p id="album-price">$850 MXN</p>
+                <p id="etiqueta-descuento-miembro" class="etiqueta-descuento-miembro" hidden>PRECIO DE MIEMBRO: 10% MENOS</p>
 
                 <button id="add-to-cart" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     AGREGAR AL CARRITO
                 </button>
-
-                <div class="indicators"></div>
 
             </div>
 
@@ -98,8 +101,10 @@
 
     </main>
 
+    <?php require __DIR__ . '/includes/modal-cuenta.php'; ?>
     <script src="./js/productos.js"></script>
     <script src="./js/tienda.js"></script>
+    <script src="./js/cuenta.js"></script>
 
 </body>
 
