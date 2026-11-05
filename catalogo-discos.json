@@ -1,0 +1,1122 @@
+[
+    {
+        "titulo": "AFTER HOURS",
+        "artista": "THE WEEKND",
+        "precio": 850,
+        "imagen": "./imagenes/albums/after-hours.webp",
+        "codigo": "after-hours-the-weeknd",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "RANDOM ACCESS MEMORIES",
+        "artista": "DAFT PUNK",
+        "precio": 920,
+        "imagen": "./imagenes/albums/ram.webp",
+        "codigo": "random-access-memories-daft-punk",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LUST FOR LIFE",
+        "artista": "LANA DEL REY",
+        "precio": 780,
+        "imagen": "./imagenes/albums/lust-for-life.webp",
+        "codigo": "lust-for-life-lana-del-rey",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ABBEY ROAD",
+        "artista": "THE BEATLES",
+        "precio": 990,
+        "imagen": "./imagenes/albums/abbey-road.webp",
+        "codigo": "abbey-road-the-beatles",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "AM",
+        "artista": "ARCTIC MONKEYS",
+        "precio": 750,
+        "imagen": "./imagenes/albums/am.webp",
+        "codigo": "am-arctic-monkeys",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GTA SAN ANDREAS OST",
+        "artista": "VARIOS",
+        "precio": 700,
+        "imagen": "./imagenes/albums/gta.webp",
+        "codigo": "gta-san-andreas-ost-varios",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IN UTERO",
+        "artista": "NIRVANA",
+        "precio": 820,
+        "imagen": "./imagenes/albums/in-utero.webp",
+        "codigo": "in-utero-nirvana",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "STARBOY",
+        "artista": "THE WEEKND",
+        "precio": 850,
+        "imagen": "./imagenes/albums/starboy.webp",
+        "codigo": "starboy-the-weeknd",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THRILLER",
+        "artista": "MICHAEL JACKSON",
+        "precio": 950,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg",
+        "codigo": "thriller-michael-jackson",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE DARK SIDE OF THE MOON",
+        "artista": "PINK FLOYD",
+        "precio": 1100,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/76/b0/3e76b0e3-762b-2286-a019-8afb19cee541/886445635829.jpg/600x600bb.jpg",
+        "codigo": "the-dark-side-of-the-moon-pink-floyd",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "RUMOURS",
+        "artista": "FLEETWOOD MAC",
+        "precio": 890,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/600x600bb.jpg",
+        "codigo": "rumours-fleetwood-mac",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BLONDE",
+        "artista": "FRANK OCEAN",
+        "precio": 980,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/600x600bb.jpg",
+        "codigo": "blonde-frank-ocean",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "DAMN.",
+        "artista": "KENDRICK LAMAR",
+        "precio": 870,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg",
+        "codigo": "damn-kendrick-lamar",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HAPPIER THAN EVER",
+        "artista": "BILLIE EILISH",
+        "precio": 860,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/b7/6d/02b76dd3-4006-bc65-9f33-33b70a95222a/21UMGIM36684.rgb.jpg/600x600bb.jpg",
+        "codigo": "happier-than-ever-billie-eilish",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "UN VERANO SIN TI",
+        "artista": "BAD BUNNY",
+        "precio": 900,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/600x600bb.jpg",
+        "codigo": "un-verano-sin-ti-bad-bunny",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "OK COMPUTER",
+        "artista": "RADIOHEAD",
+        "precio": 880,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg",
+        "codigo": "ok-computer-radiohead",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CURRENTS",
+        "artista": "TAME IMPALA",
+        "precio": 840,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/600x600bb.jpg",
+        "codigo": "currents-tame-impala",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "A NIGHT AT THE OPERA",
+        "artista": "QUEEN",
+        "precio": 960,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dd/86/92/dd86925d-484d-8ee7-3985-ef3264214269/602527644264.jpg/600x600bb.jpg",
+        "codigo": "a-night-at-the-opera-queen",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "DEMON DAYS",
+        "artista": "GORILLAZ",
+        "precio": 820,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/600x600bb.jpg",
+        "codigo": "demon-days-gorillaz",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CANCIÓN ANIMAL",
+        "artista": "SODA STEREO",
+        "precio": 790,
+        "imagen": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/60/18/68/601868f7-68ba-9416-af42-b26b2f68035f/mzi.qyqtvoxs.jpg/600x600bb.jpg",
+        "codigo": "canci-on-animal-soda-stereo",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "AMERICAN TEEN",
+        "artista": "KHALID",
+        "precio": 780,
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png",
+        "codigo": "american-teen-khalid",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "FREE SPIRIT",
+        "artista": "KHALID",
+        "precio": 817,
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/1/1b/Khalid_-_Free_Spirit.png",
+        "codigo": "free-spirit-khalid",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SUNCITY",
+        "artista": "KHALID",
+        "precio": 854,
+        "imagen": "https://picsum.photos/seed/popstar-disco-3/600/600",
+        "codigo": "suncity-khalid",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "VESSEL",
+        "artista": "TWENTY ONE PILOTS",
+        "precio": 891,
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/0/0f/Twenty_One_Pilots_-_Vessel.png",
+        "codigo": "vessel-twenty-one-pilots",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BLURRYFACE",
+        "artista": "TWENTY ONE PILOTS",
+        "precio": 928,
+        "imagen": "https://picsum.photos/seed/popstar-disco-5/600/600",
+        "codigo": "blurryface-twenty-one-pilots",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TRENCH",
+        "artista": "TWENTY ONE PILOTS",
+        "precio": 965,
+        "imagen": "https://picsum.photos/seed/popstar-disco-6/600/600",
+        "codigo": "trench-twenty-one-pilots",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SCALED AND ICY",
+        "artista": "TWENTY ONE PILOTS",
+        "precio": 1002,
+        "imagen": "https://picsum.photos/seed/popstar-disco-7/600/600",
+        "codigo": "scaled-and-icy-twenty-one-pilots",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CLANCY",
+        "artista": "TWENTY ONE PILOTS",
+        "precio": 1039,
+        "imagen": "https://picsum.photos/seed/popstar-disco-8/600/600",
+        "codigo": "clancy-twenty-one-pilots",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CTRL",
+        "artista": "SZA",
+        "precio": 1076,
+        "imagen": "https://picsum.photos/seed/popstar-disco-9/600/600",
+        "codigo": "ctrl-sza",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SOS",
+        "artista": "SZA",
+        "precio": 792,
+        "imagen": "https://picsum.photos/seed/popstar-disco-10/600/600",
+        "codigo": "sos-sza",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TRAPSOUL",
+        "artista": "BRYSON TILLER",
+        "precio": 829,
+        "imagen": "https://picsum.photos/seed/popstar-disco-11/600/600",
+        "codigo": "trapsoul-bryson-tiller",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "21",
+        "artista": "ADELE",
+        "precio": 866,
+        "imagen": "https://picsum.photos/seed/popstar-disco-12/600/600",
+        "codigo": "21-adele",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "25",
+        "artista": "ADELE",
+        "precio": 903,
+        "imagen": "https://picsum.photos/seed/popstar-disco-13/600/600",
+        "codigo": "25-adele",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "30",
+        "artista": "ADELE",
+        "precio": 940,
+        "imagen": "https://picsum.photos/seed/popstar-disco-14/600/600",
+        "codigo": "30-adele",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "FUTURE NOSTALGIA",
+        "artista": "DUA LIPA",
+        "precio": 977,
+        "imagen": "https://picsum.photos/seed/popstar-disco-15/600/600",
+        "codigo": "future-nostalgia-dua-lipa",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CHANNEL ORANGE",
+        "artista": "FRANK OCEAN",
+        "precio": 1014,
+        "imagen": "https://picsum.photos/seed/popstar-disco-16/600/600",
+        "codigo": "channel-orange-frank-ocean",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LEMONADE",
+        "artista": "BEYONCÉ",
+        "precio": 1051,
+        "imagen": "https://picsum.photos/seed/popstar-disco-17/600/600",
+        "codigo": "lemonade-beyonc-e",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ANTI",
+        "artista": "RIHANNA",
+        "precio": 1088,
+        "imagen": "https://picsum.photos/seed/popstar-disco-18/600/600",
+        "codigo": "anti-rihanna",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MELODRAMA",
+        "artista": "LORDE",
+        "precio": 804,
+        "imagen": "https://picsum.photos/seed/popstar-disco-19/600/600",
+        "codigo": "melodrama-lorde",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "PURE HEROINE",
+        "artista": "LORDE",
+        "precio": 841,
+        "imagen": "https://picsum.photos/seed/popstar-disco-20/600/600",
+        "codigo": "pure-heroine-lorde",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TEENAGE DREAM",
+        "artista": "KATY PERRY",
+        "precio": 878,
+        "imagen": "https://picsum.photos/seed/popstar-disco-21/600/600",
+        "codigo": "teenage-dream-katy-perry",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "DOOKIE",
+        "artista": "GREEN DAY",
+        "precio": 915,
+        "imagen": "https://picsum.photos/seed/popstar-disco-22/600/600",
+        "codigo": "dookie-green-day",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "AMERICAN IDIOT",
+        "artista": "GREEN DAY",
+        "precio": 952,
+        "imagen": "https://picsum.photos/seed/popstar-disco-23/600/600",
+        "codigo": "american-idiot-green-day",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE BLACK PARADE",
+        "artista": "MY CHEMICAL ROMANCE",
+        "precio": 989,
+        "imagen": "https://picsum.photos/seed/popstar-disco-24/600/600",
+        "codigo": "the-black-parade-my-chemical-romance",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THREE CHEERS FOR SWEET REVENGE",
+        "artista": "MY CHEMICAL ROMANCE",
+        "precio": 1026,
+        "imagen": "https://picsum.photos/seed/popstar-disco-25/600/600",
+        "codigo": "three-cheers-for-sweet-revenge-my-chemical-romance",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IS THIS IT",
+        "artista": "THE STROKES",
+        "precio": 1063,
+        "imagen": "https://picsum.photos/seed/popstar-disco-26/600/600",
+        "codigo": "is-this-it-the-strokes",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ROOM ON FIRE",
+        "artista": "THE STROKES",
+        "precio": 1100,
+        "imagen": "https://picsum.photos/seed/popstar-disco-27/600/600",
+        "codigo": "room-on-fire-the-strokes",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IN RAINBOWS",
+        "artista": "RADIOHEAD",
+        "precio": 816,
+        "imagen": "https://picsum.photos/seed/popstar-disco-28/600/600",
+        "codigo": "in-rainbows-radiohead",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "KID A",
+        "artista": "RADIOHEAD",
+        "precio": 853,
+        "imagen": "https://picsum.photos/seed/popstar-disco-29/600/600",
+        "codigo": "kid-a-radiohead",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ORIGIN OF SYMMETRY",
+        "artista": "MUSE",
+        "precio": 890,
+        "imagen": "https://picsum.photos/seed/popstar-disco-30/600/600",
+        "codigo": "origin-of-symmetry-muse",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ABSOLUTION",
+        "artista": "MUSE",
+        "precio": 927,
+        "imagen": "https://picsum.photos/seed/popstar-disco-31/600/600",
+        "codigo": "absolution-muse",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BLACK HOLES AND REVELATIONS",
+        "artista": "MUSE",
+        "precio": 964,
+        "imagen": "https://picsum.photos/seed/popstar-disco-32/600/600",
+        "codigo": "black-holes-and-revelations-muse",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "PARACHUTES",
+        "artista": "COLDPLAY",
+        "precio": 1001,
+        "imagen": "https://picsum.photos/seed/popstar-disco-33/600/600",
+        "codigo": "parachutes-coldplay",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "A RUSH OF BLOOD TO THE HEAD",
+        "artista": "COLDPLAY",
+        "precio": 1038,
+        "imagen": "https://picsum.photos/seed/popstar-disco-34/600/600",
+        "codigo": "a-rush-of-blood-to-the-head-coldplay",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "VIVA LA VIDA OR DEATH AND ALL HIS FRIENDS",
+        "artista": "COLDPLAY",
+        "precio": 1075,
+        "imagen": "https://picsum.photos/seed/popstar-disco-35/600/600",
+        "codigo": "viva-la-vida-or-death-and-all-his-friends-coldplay",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HYBRID THEORY",
+        "artista": "LINKIN PARK",
+        "precio": 791,
+        "imagen": "https://picsum.photos/seed/popstar-disco-36/600/600",
+        "codigo": "hybrid-theory-linkin-park",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "METEORA",
+        "artista": "LINKIN PARK",
+        "precio": 828,
+        "imagen": "https://picsum.photos/seed/popstar-disco-37/600/600",
+        "codigo": "meteora-linkin-park",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TOXICITY",
+        "artista": "SYSTEM OF A DOWN",
+        "precio": 865,
+        "imagen": "https://picsum.photos/seed/popstar-disco-38/600/600",
+        "codigo": "toxicity-system-of-a-down",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MEZMERIZE",
+        "artista": "SYSTEM OF A DOWN",
+        "precio": 902,
+        "imagen": "https://picsum.photos/seed/popstar-disco-39/600/600",
+        "codigo": "mezmerize-system-of-a-down",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SONGS FOR THE DEAF",
+        "artista": "QUEENS OF THE STONE AGE",
+        "precio": 939,
+        "imagen": "https://picsum.photos/seed/popstar-disco-40/600/600",
+        "codigo": "songs-for-the-deaf-queens-of-the-stone-age",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE NEW ABNORMAL",
+        "artista": "THE STROKES",
+        "precio": 976,
+        "imagen": "https://picsum.photos/seed/popstar-disco-41/600/600",
+        "codigo": "the-new-abnormal-the-strokes",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "DISCOVERY",
+        "artista": "DAFT PUNK",
+        "precio": 1013,
+        "imagen": "https://picsum.photos/seed/popstar-disco-42/600/600",
+        "codigo": "discovery-daft-punk",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HOMEWORK",
+        "artista": "DAFT PUNK",
+        "precio": 1050,
+        "imagen": "https://picsum.photos/seed/popstar-disco-43/600/600",
+        "codigo": "homework-daft-punk",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CROSS",
+        "artista": "JUSTICE",
+        "precio": 1087,
+        "imagen": "https://picsum.photos/seed/popstar-disco-44/600/600",
+        "codigo": "cross-justice",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TRUE",
+        "artista": "AVICII",
+        "precio": 803,
+        "imagen": "https://picsum.photos/seed/popstar-disco-45/600/600",
+        "codigo": "true-avicii",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "STORIES",
+        "artista": "AVICII",
+        "precio": 840,
+        "imagen": "https://picsum.photos/seed/popstar-disco-46/600/600",
+        "codigo": "stories-avicii",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "WORLDS",
+        "artista": "PORTER ROBINSON",
+        "precio": 877,
+        "imagen": "https://picsum.photos/seed/popstar-disco-47/600/600",
+        "codigo": "worlds-porter-robinson",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "NURTURE",
+        "artista": "PORTER ROBINSON",
+        "precio": 914,
+        "imagen": "https://picsum.photos/seed/popstar-disco-48/600/600",
+        "codigo": "nurture-porter-robinson",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IN RETURN",
+        "artista": "ODESZA",
+        "precio": 951,
+        "imagen": "https://picsum.photos/seed/popstar-disco-49/600/600",
+        "codigo": "in-return-odesza",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "A MOMENT APART",
+        "artista": "ODESZA",
+        "precio": 988,
+        "imagen": "https://picsum.photos/seed/popstar-disco-50/600/600",
+        "codigo": "a-moment-apart-odesza",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SKIN",
+        "artista": "FLUME",
+        "precio": 1025,
+        "imagen": "https://picsum.photos/seed/popstar-disco-51/600/600",
+        "codigo": "skin-flume",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IMMUNITY",
+        "artista": "JON HOPKINS",
+        "precio": 1062,
+        "imagen": "https://picsum.photos/seed/popstar-disco-52/600/600",
+        "codigo": "immunity-jon-hopkins",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SETTLE",
+        "artista": "DISCLOSURE",
+        "precio": 1099,
+        "imagen": "https://picsum.photos/seed/popstar-disco-53/600/600",
+        "codigo": "settle-disclosure",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "WELCOME REALITY",
+        "artista": "NERO",
+        "precio": 815,
+        "imagen": "https://picsum.photos/seed/popstar-disco-54/600/600",
+        "codigo": "welcome-reality-nero",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SYRO",
+        "artista": "APHEX TWIN",
+        "precio": 852,
+        "imagen": "https://picsum.photos/seed/popstar-disco-55/600/600",
+        "codigo": "syro-aphex-twin",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "PLAY",
+        "artista": "MOBY",
+        "precio": 889,
+        "imagen": "https://picsum.photos/seed/popstar-disco-56/600/600",
+        "codigo": "play-moby",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "KIND OF BLUE",
+        "artista": "MILES DAVIS",
+        "precio": 926,
+        "imagen": "https://picsum.photos/seed/popstar-disco-57/600/600",
+        "codigo": "kind-of-blue-miles-davis",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TIME OUT",
+        "artista": "DAVE BRUBECK",
+        "precio": 963,
+        "imagen": "https://picsum.photos/seed/popstar-disco-58/600/600",
+        "codigo": "time-out-dave-brubeck",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BLUE TRAIN",
+        "artista": "JOHN COLTRANE",
+        "precio": 1000,
+        "imagen": "https://picsum.photos/seed/popstar-disco-59/600/600",
+        "codigo": "blue-train-john-coltrane",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "A LOVE SUPREME",
+        "artista": "JOHN COLTRANE",
+        "precio": 1037,
+        "imagen": "https://picsum.photos/seed/popstar-disco-60/600/600",
+        "codigo": "a-love-supreme-john-coltrane",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MINGUS AH UM",
+        "artista": "CHARLES MINGUS",
+        "precio": 1074,
+        "imagen": "https://picsum.photos/seed/popstar-disco-61/600/600",
+        "codigo": "mingus-ah-um-charles-mingus",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HEAD HUNTERS",
+        "artista": "HERBIE HANCOCK",
+        "precio": 790,
+        "imagen": "https://picsum.photos/seed/popstar-disco-62/600/600",
+        "codigo": "head-hunters-herbie-hancock",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GETZ/GILBERTO",
+        "artista": "STAN GETZ",
+        "precio": 827,
+        "imagen": "https://picsum.photos/seed/popstar-disco-63/600/600",
+        "codigo": "getz-gilberto-stan-getz",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "CHET BAKER SINGS",
+        "artista": "CHET BAKER",
+        "precio": 864,
+        "imagen": "https://picsum.photos/seed/popstar-disco-64/600/600",
+        "codigo": "chet-baker-sings-chet-baker",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BITCHES BREW",
+        "artista": "MILES DAVIS",
+        "precio": 901,
+        "imagen": "https://picsum.photos/seed/popstar-disco-65/600/600",
+        "codigo": "bitches-brew-miles-davis",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "I PUT A SPELL ON YOU",
+        "artista": "NINA SIMONE",
+        "precio": 938,
+        "imagen": "https://picsum.photos/seed/popstar-disco-66/600/600",
+        "codigo": "i-put-a-spell-on-you-nina-simone",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GOOD KID, M.A.A.D CITY",
+        "artista": "KENDRICK LAMAR",
+        "precio": 975,
+        "imagen": "https://picsum.photos/seed/popstar-disco-67/600/600",
+        "codigo": "good-kid-m-a-a-d-city-kendrick-lamar",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TO PIMP A BUTTERFLY",
+        "artista": "KENDRICK LAMAR",
+        "precio": 1012,
+        "imagen": "https://picsum.photos/seed/popstar-disco-68/600/600",
+        "codigo": "to-pimp-a-butterfly-kendrick-lamar",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MR. MORALE & THE BIG STEPPERS",
+        "artista": "KENDRICK LAMAR",
+        "precio": 1049,
+        "imagen": "https://picsum.photos/seed/popstar-disco-69/600/600",
+        "codigo": "mr-morale-the-big-steppers-kendrick-lamar",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ILLMATIC",
+        "artista": "NAS",
+        "precio": 1086,
+        "imagen": "https://picsum.photos/seed/popstar-disco-70/600/600",
+        "codigo": "illmatic-nas",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IT WAS WRITTEN",
+        "artista": "NAS",
+        "precio": 802,
+        "imagen": "https://picsum.photos/seed/popstar-disco-71/600/600",
+        "codigo": "it-was-written-nas",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "READY TO DIE",
+        "artista": "THE NOTORIOUS B.I.G.",
+        "precio": 839,
+        "imagen": "https://picsum.photos/seed/popstar-disco-72/600/600",
+        "codigo": "ready-to-die-the-notorious-b-i-g",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LIFE AFTER DEATH",
+        "artista": "THE NOTORIOUS B.I.G.",
+        "precio": 876,
+        "imagen": "https://picsum.photos/seed/popstar-disco-73/600/600",
+        "codigo": "life-after-death-the-notorious-b-i-g",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE COLLEGE DROPOUT",
+        "artista": "KANYE WEST",
+        "precio": 913,
+        "imagen": "https://picsum.photos/seed/popstar-disco-74/600/600",
+        "codigo": "the-college-dropout-kanye-west",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LATE REGISTRATION",
+        "artista": "KANYE WEST",
+        "precio": 950,
+        "imagen": "https://picsum.photos/seed/popstar-disco-75/600/600",
+        "codigo": "late-registration-kanye-west",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GRADUATION",
+        "artista": "KANYE WEST",
+        "precio": 987,
+        "imagen": "https://picsum.photos/seed/popstar-disco-76/600/600",
+        "codigo": "graduation-kanye-west",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MY BEAUTIFUL DARK TWISTED FANTASY",
+        "artista": "KANYE WEST",
+        "precio": 1024,
+        "imagen": "https://picsum.photos/seed/popstar-disco-77/600/600",
+        "codigo": "my-beautiful-dark-twisted-fantasy-kanye-west",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ASTROWORLD",
+        "artista": "TRAVIS SCOTT",
+        "precio": 1061,
+        "imagen": "https://picsum.photos/seed/popstar-disco-78/600/600",
+        "codigo": "astroworld-travis-scott",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "RODEO",
+        "artista": "TRAVIS SCOTT",
+        "precio": 1098,
+        "imagen": "https://picsum.photos/seed/popstar-disco-79/600/600",
+        "codigo": "rodeo-travis-scott",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "TAKE CARE",
+        "artista": "DRAKE",
+        "precio": 814,
+        "imagen": "https://picsum.photos/seed/popstar-disco-80/600/600",
+        "codigo": "take-care-drake",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "2014 FOREST HILLS DRIVE",
+        "artista": "J. COLE",
+        "precio": 851,
+        "imagen": "https://picsum.photos/seed/popstar-disco-81/600/600",
+        "codigo": "2014-forest-hills-drive-j-cole",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "YHLQMDLG",
+        "artista": "BAD BUNNY",
+        "precio": 888,
+        "imagen": "https://picsum.photos/seed/popstar-disco-82/600/600",
+        "codigo": "yhlqmdlg-bad-bunny",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "EL ÚLTIMO TOUR DEL MUNDO",
+        "artista": "BAD BUNNY",
+        "precio": 925,
+        "imagen": "https://picsum.photos/seed/popstar-disco-83/600/600",
+        "codigo": "el-ultimo-tour-del-mundo-bad-bunny",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MOTOMAMI",
+        "artista": "ROSALÍA",
+        "precio": 962,
+        "imagen": "https://picsum.photos/seed/popstar-disco-84/600/600",
+        "codigo": "motomami-rosal-ia",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "EL MAL QUERER",
+        "artista": "ROSALÍA",
+        "precio": 999,
+        "imagen": "https://picsum.photos/seed/popstar-disco-85/600/600",
+        "codigo": "el-mal-querer-rosal-ia",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BOCANADA",
+        "artista": "GUSTAVO CERATI",
+        "precio": 1036,
+        "imagen": "https://picsum.photos/seed/popstar-disco-86/600/600",
+        "codigo": "bocanada-gustavo-cerati",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "¿DÓNDE JUGARÁN LOS NIÑOS?",
+        "artista": "MANÁ",
+        "precio": 1073,
+        "imagen": "https://picsum.photos/seed/popstar-disco-87/600/600",
+        "codigo": "d-onde-jugar-an-los-ni-nos-man-a",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SUEÑO STEREO",
+        "artista": "SODA STEREO",
+        "precio": 789,
+        "imagen": "https://picsum.photos/seed/popstar-disco-88/600/600",
+        "codigo": "sue-no-stereo-soda-stereo",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "RE",
+        "artista": "CAFÉ TACVBA",
+        "precio": 826,
+        "imagen": "https://picsum.photos/seed/popstar-disco-89/600/600",
+        "codigo": "re-caf-e-tacvba",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ROMANCE",
+        "artista": "LUIS MIGUEL",
+        "precio": 863,
+        "imagen": "https://picsum.photos/seed/popstar-disco-90/600/600",
+        "codigo": "romance-luis-miguel",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HASTA LA RAÍZ",
+        "artista": "NATALIA LAFOURCADE",
+        "precio": 900,
+        "imagen": "https://picsum.photos/seed/popstar-disco-91/600/600",
+        "codigo": "hasta-la-ra-iz-natalia-lafourcade",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LIMÓN Y SAL",
+        "artista": "JULIETA VENEGAS",
+        "precio": 937,
+        "imagen": "https://picsum.photos/seed/popstar-disco-92/600/600",
+        "codigo": "lim-on-y-sal-julieta-venegas",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MON LAFERTE VOL. 1",
+        "artista": "MON LAFERTE",
+        "precio": 974,
+        "imagen": "https://picsum.photos/seed/popstar-disco-93/600/600",
+        "codigo": "mon-laferte-vol-1-mon-laferte",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "UN DÍA NORMAL",
+        "artista": "JUANES",
+        "precio": 1011,
+        "imagen": "https://picsum.photos/seed/popstar-disco-94/600/600",
+        "codigo": "un-d-ia-normal-juanes",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "DÓNDE ESTÁN LOS LADRONES?",
+        "artista": "SHAKIRA",
+        "precio": 1048,
+        "imagen": "https://picsum.photos/seed/popstar-disco-95/600/600",
+        "codigo": "d-onde-est-an-los-ladrones-shakira",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "ENTREN LOS QUE QUIERAN",
+        "artista": "CALLE 13",
+        "precio": 1085,
+        "imagen": "https://picsum.photos/seed/popstar-disco-96/600/600",
+        "codigo": "entren-los-que-quieran-calle-13",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+        "artista": "BILLIE EILISH",
+        "precio": 801,
+        "imagen": "https://picsum.photos/seed/popstar-disco-97/600/600",
+        "codigo": "when-we-all-fall-asleep-where-do-we-go-billie-eilish",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "REVOLVER",
+        "artista": "THE BEATLES",
+        "precio": 838,
+        "imagen": "https://picsum.photos/seed/popstar-disco-98/600/600",
+        "codigo": "revolver-the-beatles",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GOODBYE YELLOW BRICK ROAD",
+        "artista": "ELTON JOHN",
+        "precio": 875,
+        "imagen": "https://picsum.photos/seed/popstar-disco-99/600/600",
+        "codigo": "goodbye-yellow-brick-road-elton-john",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "AUTOMATIC FOR THE PEOPLE",
+        "artista": "R.E.M.",
+        "precio": 912,
+        "imagen": "https://picsum.photos/seed/popstar-disco-100/600/600",
+        "codigo": "automatic-for-the-people-r-e-m",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BACK TO BLACK",
+        "artista": "AMY WINEHOUSE",
+        "precio": 790,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-1/600/600",
+        "codigo": "back-to-black-amy-winehouse",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "PURPLE RAIN",
+        "artista": "PRINCE",
+        "precio": 833,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-2/600/600",
+        "codigo": "purple-rain-prince",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SIGN O’ THE TIMES",
+        "artista": "PRINCE",
+        "precio": 876,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-3/600/600",
+        "codigo": "sign-o-the-times-prince",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE MISEDUCATION OF LAURYN HILL",
+        "artista": "LAURYN HILL",
+        "precio": 919,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-4/600/600",
+        "codigo": "the-miseducation-of-lauryn-hill-lauryn-hill",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "IN THE AEROPLANE OVER THE SEA",
+        "artista": "NEUTRAL MILK HOTEL",
+        "precio": 962,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-5/600/600",
+        "codigo": "in-the-aeroplane-over-the-sea-neutral-milk-hotel",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BLUE",
+        "artista": "JONI MITCHELL",
+        "precio": 1005,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-6/600/600",
+        "codigo": "blue-joni-mitchell",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GRACE",
+        "artista": "JEFF BUCKLEY",
+        "precio": 1048,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-7/600/600",
+        "codigo": "grace-jeff-buckley",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HOUNDS OF LOVE",
+        "artista": "KATE BUSH",
+        "precio": 790,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-8/600/600",
+        "codigo": "hounds-of-love-kate-bush",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "MUSIC FROM BIG PINK",
+        "artista": "THE BAND",
+        "precio": 833,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-9/600/600",
+        "codigo": "music-from-big-pink-the-band",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HOTEL CALIFORNIA",
+        "artista": "EAGLES",
+        "precio": 876,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-10/600/600",
+        "codigo": "hotel-california-eagles",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "THE QUEEN IS DEAD",
+        "artista": "THE SMITHS",
+        "precio": 919,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-11/600/600",
+        "codigo": "the-queen-is-dead-the-smiths",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "LOW",
+        "artista": "DAVID BOWIE",
+        "precio": 962,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-12/600/600",
+        "codigo": "low-david-bowie",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "REMAIN IN LIGHT",
+        "artista": "TALKING HEADS",
+        "precio": 1005,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-13/600/600",
+        "codigo": "remain-in-light-talking-heads",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "BORN TO RUN",
+        "artista": "BRUCE SPRINGSTEEN",
+        "precio": 1048,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-14/600/600",
+        "codigo": "born-to-run-bruce-springsteen",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SPEAK NOW",
+        "artista": "TAYLOR SWIFT",
+        "precio": 790,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-15/600/600",
+        "codigo": "speak-now-taylor-swift",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "1989",
+        "artista": "TAYLOR SWIFT",
+        "precio": 833,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-16/600/600",
+        "codigo": "1989-taylor-swift",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "GUTS",
+        "artista": "OLIVIA RODRIGO",
+        "precio": 876,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-17/600/600",
+        "codigo": "guts-olivia-rodrigo",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "HARRY’S HOUSE",
+        "artista": "HARRY STYLES",
+        "precio": 919,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-18/600/600",
+        "codigo": "harry-s-house-harry-styles",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "AFRODISIACO",
+        "artista": "RAUW ALEJANDRO",
+        "precio": 962,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-19/600/600",
+        "codigo": "afrodisiaco-rauw-alejandro",
+        "stock_inicial": 5
+    },
+    {
+        "titulo": "SAFARI",
+        "artista": "J BALVIN",
+        "precio": 1005,
+        "imagen": "https://picsum.photos/seed/popstar-nuevo-20/600/600",
+        "codigo": "safari-j-balvin",
+        "stock_inicial": 5
+    }
+]

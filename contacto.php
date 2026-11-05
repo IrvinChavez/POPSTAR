@@ -8,16 +8,22 @@ $correo = '';
 $mensaje = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = trim($_POST['nombre'] ?? '');
-    $correo = trim($_POST['correo'] ?? '');
-    $mensaje = trim($_POST['mensaje'] ?? '');
+    $nombre = isset($_POST['nombre']) && is_string($_POST['nombre'])
+        ? trim($_POST['nombre'])
+        : '';
+    $correo = isset($_POST['correo']) && is_string($_POST['correo'])
+        ? trim($_POST['correo'])
+        : '';
+    $mensaje = isset($_POST['mensaje']) && is_string($_POST['mensaje'])
+        ? trim($_POST['mensaje'])
+        : '';
     $destinatario = getenv('POPSTAR_CONTACT_EMAIL');
 
-    if ($nombre === '' || strlen($nombre) > 120) {
+    if ($nombre === '' || mb_strlen($nombre, 'UTF-8') > 120) {
         $notificacion = 'Escribe tu nombre (máximo 120 caracteres).';
     } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         $notificacion = 'Escribe una dirección de correo electrónico válida.';
-    } elseif ($mensaje === '' || strlen($mensaje) > 5000) {
+    } elseif ($mensaje === '' || mb_strlen($mensaje, 'UTF-8') > 5000) {
         $notificacion = 'Escribe tu mensaje (máximo 5000 caracteres).';
     } elseif (!$destinatario || !filter_var($destinatario, FILTER_VALIDATE_EMAIL)) {
         $notificacion = 'El formulario aún no está configurado para recibir mensajes.';
@@ -59,8 +65,10 @@ function escapar($valor)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | POPSTAR</title>
-    <link rel="stylesheet" href="./estilos/contacto.css">
-    <link rel="stylesheet" href="./estilos/cuenta.css">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="stylesheet" href="./estilos/contacto.css?v=2">
+    <link rel="stylesheet" href="./estilos/cuenta.css?v=6">
+    <link rel="stylesheet" href="./estilos/transiciones.css?v=1">
 </head>
 <body data-descuento-miembro="<?= $cuentaActual ? '10' : '0' ?>">
     <header class="encabezado">
@@ -68,6 +76,7 @@ function escapar($valor)
         <nav class="navegacion" aria-label="Navegación principal">
             <a href="./index.php">Inicio</a>
             <a href="./tienda.php">Tienda</a>
+            <a href="./quiz.php">Quiz</a>
             <a href="./contacto.php" aria-current="page">Contacto</a>
             <?php require __DIR__ . '/includes/boton-cuenta.php'; ?>
         </nav>
@@ -87,8 +96,9 @@ function escapar($valor)
             </div>
             <div class="mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8309729538137!2d-106.07804732241178!3d28.634827583972843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea434d97d19423%3A0xd504b74876bc0f1e!2sLa%20nube%20records!5e0!3m2!1ses-419!2smx!4v1790713573640!5m2!1ses-419!2smx"
-                    title="Mapa con la ubicación de la tienda ficticia"
+                    title="Mapa con la ubicación de La nube records en Chihuahua"
                     loading="lazy"
+                    fetchpriority="high"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen>
                 </iframe>
@@ -120,8 +130,8 @@ function escapar($valor)
                     <p class="sobrelinea">Estamos para ayudarte</p>
                     <h2 id="titulo-contacto">Escríbenos</h2>
                 </div>
-                <p class="dato"><span>Teléfono</span><a href="tel:+520000000000">+52 000 000 0000</a></p>
-                <p class="nota-numero">Reemplaza este ejemplo por tu número personal.</p>
+                <p class="dato"><span>Teléfono</span><a href="tel:+52 111 222 3333">+52 111 222 3333</a></p>
+                
 
                 <?php if ($notificacion !== ''): ?>
                     <p class="notificacion <?= $tipoNotificacion ?>" role="<?= $tipoNotificacion === 'exito' ? 'status' : 'alert' ?>">
@@ -131,21 +141,21 @@ function escapar($valor)
 
                 <form action="./contacto.php" method="post" novalidate>
                     <label for="nombre">Nombre</label>
-                    <input id="nombre" name="nombre" autocomplete="name" maxlength="120" value="<?= escapar($nombre) ?>" required>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" value="<?= escapar($nombre) ?>">
 
                     <label for="correo">Correo electrónico</label>
-                    <input id="correo" name="correo" type="email" autocomplete="email" value="<?= escapar($correo) ?>" required>
+                    <input id="correo" name="correo" type="text" inputmode="email" autocomplete="email" value="<?= escapar($correo) ?>">
 
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" maxlength="5000" required><?= escapar($mensaje) ?></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5"><?= escapar($mensaje) ?></textarea>
 
                     <button type="submit">Enviar mensaje</button>
                 </form>
-                <p class="nota-formulario">Los mensajes se envían al correo configurado en el servidor.</p>
             </section>
         </div>
     </main>
     <?php require __DIR__ . '/includes/modal-cuenta.php'; ?>
-    <script src="./js/cuenta.js"></script>
+    <script src="./js/cuenta.js?v=5"></script>
+    <script src="./js/transiciones.js?v=1"></script>
 </body>
 </html>

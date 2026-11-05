@@ -20,17 +20,18 @@
 }
 
 .modal-cuenta {
-    width: min(460px, calc(100vw - 2rem));
+    width: min(500px, calc(100vw - 2rem));
     max-width: none;
-    max-height: min(90vh, 760px);
+    max-height: min(90vh, 800px);
     margin: auto;
     padding: 0;
     overflow: auto;
     border: 1px solid #d52b32;
-    background: #111;
+    border-radius: 10px;
+    background: #120d0d;
     color: #f5f2ef;
-    box-shadow: 0 0 28px rgba(213, 43, 50, 0.28);
-    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.55), 0 0 28px rgba(213, 43, 50, 0.24);
+    font-family: inherit;
     opacity: 0;
     transform: translateY(14px) scale(0.98);
     transition:
@@ -89,19 +90,24 @@
 
 .modal-cuenta__contenido {
     position: relative;
-    padding: 1.5rem 1.6rem;
+    padding: 1.75rem;
 }
 
 .modal-cuenta__cerrar {
     position: absolute;
-    top: 0.7rem;
-    right: 0.8rem;
-    padding: 0.1rem 0.3rem;
+    top: 0.85rem;
+    right: 0.9rem;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    padding: 0;
+    border-radius: 50%;
     border: 0;
     background: transparent;
     color: #aaa;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1;
 }
 
@@ -111,17 +117,17 @@
 
 .modal-cuenta__pestanas {
     display: flex;
-    gap: 1rem;
-    margin: 0 1.5rem 1.25rem 0;
+    gap: 1.25rem;
+    margin: 0 2.5rem 1.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .modal-cuenta__pestana {
-    padding: 0.45rem 0;
+    padding: 0.65rem 0;
     border: 0;
     border-bottom: 2px solid transparent;
     background: transparent;
-    color: #aaa;
+    color: #b9b9b9;
     cursor: pointer;
     font: inherit;
     font-weight: 700;
@@ -133,35 +139,37 @@
 }
 
 .modal-cuenta__beneficios {
-    margin-bottom: 1.25rem;
-    padding: 0.9rem;
-    border: 1px solid rgba(70, 210, 140, 0.35);
-    background: rgba(30, 100, 65, 0.12);
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(213, 43, 50, 0.38);
+    border-radius: 7px;
+    background: linear-gradient(120deg, rgba(143, 18, 25, 0.2), rgba(0, 0, 0, 0.18));
 }
 
 .modal-cuenta__beneficios h2 {
-    margin-bottom: 0.5rem;
-    color: #48d18a;
-    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+    color: #f07878;
+    font-size: 0.9rem;
 }
 
 .modal-cuenta__beneficios ul {
     display: grid;
-    gap: 0.35rem;
+    gap: 0.5rem;
     padding: 0;
     list-style: none;
     color: #c4bfbb;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
 }
 
 .modal-cuenta__beneficios li::before {
     content: "✓ ";
-    color: #48d18a;
+    color: #f05b62;
 }
 
 .modal-cuenta__formulario {
     display: grid;
-    gap: 0.45rem;
+    gap: 0.6rem;
 }
 
 .modal-cuenta__formulario[hidden],
@@ -170,9 +178,9 @@
 }
 
 .modal-cuenta__formulario > label {
-    margin-top: 0.25rem;
+    margin-top: 0.2rem;
     color: #c4bfbb;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -180,59 +188,91 @@
 .modal-cuenta__formulario > input {
     width: 100%;
     min-width: 0;
-    padding: 0.7rem;
-    border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 0;
-    background: #151515;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 5px;
+    background: #1b1515;
     color: #f5f2ef;
     font: inherit;
-    font-size: 0.88rem;
+    font-size: 0.92rem;
 }
 
 .modal-cuenta__formulario > input:focus {
     border-color: #d52b32;
-    outline: 2px solid rgba(213, 43, 50, 0.35);
+    outline: 2px solid rgba(213, 43, 50, 0.28);
+    outline-offset: 1px;
 }
 
 .modal-cuenta__consentimiento {
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem;
-    margin: 0.35rem 0;
+    gap: 0.7rem;
+    margin: 0.6rem 0;
     color: #c4bfbb;
-    font-size: 0.75rem;
-    line-height: 1.35;
+    font-size: 0.8rem;
+    line-height: 1.5;
 }
 
 .modal-cuenta__consentimiento input {
     width: auto;
-    margin-top: 0.15rem;
+    margin-top: 0.2rem;
     flex: 0 0 auto;
+    accent-color: #d52b32;
 }
 
 .modal-cuenta__submit {
     width: 100%;
-    margin-top: 0.4rem;
-    padding: 0.8rem;
+    min-height: 48px;
+    margin-top: 0.55rem;
+    padding: 0.85rem 1rem;
     border: 0;
     background: #d52b32;
     color: #fff;
     cursor: pointer;
     font: inherit;
     font-weight: 700;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+    transition: background-color 180ms ease, transform 180ms ease;
 }
 
 .modal-cuenta__submit:hover {
     background: #b91f27;
+    transform: translateY(-1px);
 }
 
 .modal-cuenta__mensaje {
     margin: 0 0 1rem;
-    padding: 0.65rem;
+    padding: 0.8rem;
     border: 1px solid #d52b32;
     font-size: 0.82rem;
     line-height: 1.4;
+}
+
+.modal-cuenta__aviso-quiz {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.modal-cuenta__aviso-quiz:not([hidden]) {
+    display: flex;
+}
+
+.modal-cuenta__aviso-quiz p {
+    margin: 0;
+}
+
+.modal-cuenta__aviso-quiz button {
+    flex: 0 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
 .modal-cuenta__mensaje.exito {
@@ -245,9 +285,10 @@
 }
 
 .modal-cuenta__pie {
-    margin-top: 0.9rem;
-    color: #aaa;
-    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #b9b9b9;
+    font-size: 0.8rem;
+    line-height: 1.5;
     text-align: center;
 }
 
@@ -255,9 +296,10 @@
     padding: 0;
     border: 0;
     background: transparent;
-    color: #ff5258;
+    color: #f05b62;
     cursor: pointer;
     font: inherit;
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
@@ -267,9 +309,106 @@
     font-size: 1rem;
 }
 
+.modal-cuenta__historial {
+    width: min(100%, 430px);
+    margin: 1.25rem auto 0;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: #1b1515;
+    text-align: center;
+}
+
+.modal-cuenta__historial h3 {
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+}
+
+.modal-cuenta__historial ol {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.modal-cuenta__historial ol[hidden] {
+    display: none;
+}
+
+.modal-cuenta__historial li {
+    display: grid;
+    justify-items: center;
+    gap: 0.2rem;
+    color: #f5f2ef;
+    font-size: 0.82rem;
+}
+
+.modal-cuenta__historial time {
+    display: block;
+    color: #b9b9b9;
+    font-size: 0.72rem;
+}
+
+.modal-cuenta__ver-catalogo {
+    display: inline-block;
+    margin-top: 0.35rem;
+    color: #f05b62;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.modal-cuenta__ver-catalogo:hover {
+    color: #fff;
+}
+
+.quiz-error-historico {
+    width: min(90%, 600px);
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #d52b32;
+    color: #fff;
+    text-align: center;
+}
+
 .modal-cuenta__cuenta form {
     display: grid;
     margin-top: 1rem;
+}
+
+.modal-cuenta__eliminar {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(213, 43, 50, 0.35);
+}
+
+.modal-cuenta__eliminar h3 {
+    color: #f07878;
+    font-size: 0.9rem;
+}
+
+.modal-cuenta__eliminar > p {
+    color: #c4bfbb;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.modal-cuenta__submit--peligro {
+    border: 1px solid #d52b32;
+    background: transparent;
+    color: #ff777d;
+}
+
+.modal-cuenta__submit--peligro:hover {
+    background: #8f1219;
+    color: #fff;
+}
+
+.modal-cuenta__cerrar-sesion {
+    margin-top: 1.25rem;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -279,7 +418,50 @@
     }
 
     .modal-cuenta__contenido {
-        padding: 1.15rem;
+        padding: 1.25rem;
+    }
+
+    .modal-cuenta {
+        width: calc(100vw - 1.25rem);
+        max-height: min(92vh, 760px);
+        border-radius: 8px;
+    }
+
+    .modal-cuenta__pestanas {
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .modal-cuenta__pestana {
+        min-height: 44px;
+        font-size: 0.92rem;
+    }
+
+    .modal-cuenta__beneficios {
+        margin-bottom: 1.25rem;
+        padding: 0.9rem;
+    }
+
+    .modal-cuenta__formulario {
+        gap: 0.55rem;
+    }
+
+    .modal-cuenta__formulario > input {
+        min-height: 46px;
+        font-size: 1rem;
+    }
+
+    .modal-cuenta__formulario > label {
+        font-size: 0.7rem;
+    }
+
+    .modal-cuenta__consentimiento {
+        font-size: 0.82rem;
+    }
+
+    .modal-cuenta__submit {
+        min-height: 50px;
+        margin-top: 0.7rem;
     }
 }
 

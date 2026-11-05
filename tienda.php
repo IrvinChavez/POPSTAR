@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/includes/cuenta-controller.php'; ?>
+<?php
+require_once __DIR__ . '/includes/cuenta-controller.php';
+require_once __DIR__ . '/includes/catalogo-controller.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,11 +18,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="./estilos/tienda.css">
-    <link rel="stylesheet" href="./estilos/cuenta.css">
+    <link rel="stylesheet" href="./estilos/tienda.css?v=3">
+    <link rel="stylesheet" href="./estilos/cuenta.css?v=6">
+    <link rel="stylesheet" href="./estilos/transiciones.css?v=1">
 </head>
 
-<body data-descuento-miembro="<?= $cuentaActual ? '10' : '0' ?>">
+<body data-descuento-miembro="<?= $cuentaActual ? '10' : '0' ?>"
+    data-csrf-carrito="<?= htmlspecialchars($csrfCuenta, ENT_QUOTES, 'UTF-8') ?>">
 
     <header class="encabezado">
 
@@ -30,6 +35,8 @@
             <a href="./index.php">INICIO</a>
 
             <a href="./tienda.php" class="activo">TIENDA</a>
+
+            <a href="./quiz.php">QUIZ</a>
 
             <a href="./contacto.php">CONTACTO</a>
 
@@ -78,6 +85,7 @@
                 </button>
 
             </div>
+            <p id="carousel-indicador" class="carousel-indicador" aria-label="Posición del álbum en el carrusel" aria-live="polite" aria-atomic="true"></p>
 
             <div class="product-info">
 
@@ -86,6 +94,7 @@
                 <p id="album-artist">THE WEEKND</p>
 
                 <p id="album-price">$850 MXN</p>
+                <p id="stock-producto" class="stock-producto" role="status"></p>
                 <p id="etiqueta-descuento-miembro" class="etiqueta-descuento-miembro" hidden>PRECIO DE MIEMBRO: 10% MENOS</p>
 
                 <button id="add-to-cart" class="btn-buy">
@@ -102,10 +111,11 @@
     </main>
 
     <?php require __DIR__ . '/includes/modal-cuenta.php'; ?>
-    <script src="./js/productos.js"></script>
-    <script src="./js/tienda.js"></script>
-    <script src="./js/cuenta.js"></script>
-
+    <script>window.popstarProductos = <?= $jsonProductosCatalogo ?>;</script>
+    <script src="./js/productos.js?v=2"></script>
+    <script src="./js/tienda.js?v=2"></script>
+    <script src="./js/cuenta.js?v=5"></script>
+    <script src="./js/transiciones.js?v=1"></script>
 </body>
 
 </html>

@@ -7,9 +7,12 @@
 :root {
     color-scheme: dark;
     --rojo: #d52b32;
+    --rojo-claro: #ff6268;
+    --rojo-oscuro: #8f1219;
     --texto: #f5f2ef;
     --texto-suave: #c4bfbb;
-    --linea: rgba(255, 255, 255, 0.2);
+    --linea: rgba(255, 255, 255, 0.14);
+    --panel: rgba(12, 8, 9, 0.78);
 }
 
 body {
@@ -17,13 +20,13 @@ body {
     color: var(--texto);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background: #171514 url("../imagenes/imgP.webp") center / cover fixed no-repeat;
+    background: #0a0000 url("../imagenes/inicio.webp") center / cover fixed no-repeat;
 }
 
 body::before {
     position: fixed;
     z-index: -1;
-    background: rgba(12, 10, 10, 0.78);
+    background: rgba(8, 5, 6, 0.72);
     content: "";
     inset: 0;
 }
@@ -37,13 +40,20 @@ body::before {
     justify-content: space-between;
     gap: 1.5rem;
     border-bottom: 1px solid var(--linea);
+    background: linear-gradient(180deg, rgba(5, 4, 4, 0.82), rgba(5, 4, 4, 0.2));
 }
 
 .marca {
     color: var(--texto);
     font-size: 1.25rem;
     font-weight: 800;
+    letter-spacing: 0.14em;
     text-decoration: none;
+}
+
+.marca::before {
+    color: var(--rojo);
+    content: "✦ ";
 }
 
 .navegacion {
@@ -53,11 +63,13 @@ body::before {
     gap: 1.5rem;
 }
 
-.navegacion a {
+.navegacion a,
+.navegacion .boton-cuenta {
     color: var(--texto-suave);
     font-size: 0.9rem;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 180ms ease;
 }
 
 .navegacion .boton-cuenta {
@@ -69,13 +81,27 @@ body::before {
 .navegacion a:hover,
 .navegacion a[aria-current="page"],
 .navegacion .boton-cuenta:hover {
-    color: var(--texto);
+    color: var(--rojo-claro);
+}
+
+.navegacion a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--rojo);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.55rem;
+}
+
+.navegacion a:focus-visible,
+.navegacion .boton-cuenta:focus-visible,
+.marca:focus-visible {
+    outline: 2px solid var(--rojo-claro);
+    outline-offset: 4px;
 }
 
 .contacto {
     width: min(100% - 2rem, 1000px);
     margin: 0 auto;
-    padding: 4rem 0 5rem;
+    padding: clamp(2.5rem, 6vw, 4rem) 0 5rem;
 }
 
 .presentacion {
@@ -110,6 +136,7 @@ h2 {
 
 .encabezado-seccion {
     margin-bottom: 1.25rem;
+    text-align: center;
 }
 
 .encabezado-seccion h2 {
@@ -118,7 +145,12 @@ h2 {
 }
 
 .ubicacion {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid rgba(213, 43, 50, 0.24);
+    border-radius: 16px;
+    background: var(--panel);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 .mapa {
@@ -126,8 +158,9 @@ h2 {
     aspect-ratio: 16 / 9;
     max-height: 520px;
     overflow: hidden;
-    border: 1px solid var(--linea);
-    background: #211e1c;
+    border: 1px solid rgba(213, 43, 50, 0.3);
+    border-radius: 12px;
+    background: #160d0e;
 }
 
 .mapa iframe {
@@ -140,9 +173,17 @@ h2 {
 .contacto-detalles {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 4rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--linea);
+    gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.preguntas,
+.datos-contacto {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid rgba(213, 43, 50, 0.24);
+    border-radius: 16px;
+    background: var(--panel);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 .preguntas details {
@@ -153,19 +194,28 @@ h2 {
 .preguntas summary {
     cursor: pointer;
     font-weight: 700;
+    transition: color 180ms ease;
+    text-align: center;
+}
+
+.preguntas summary:hover,
+.preguntas details[open] summary {
+    color: var(--rojo-claro);
 }
 
 .preguntas details p {
-    padding: 0.75rem 1.5rem 0 0;
+    padding: 0.75rem 0 0;
     color: var(--texto-suave);
+    text-align: center;
 }
 
 .dato {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0.5rem 1rem;
     padding: 0.8rem 0 0;
+    text-align: center;
 }
 
 .dato span {
@@ -173,7 +223,7 @@ h2 {
 }
 
 .dato a {
-    color: var(--texto);
+    color: var(--rojo-claro);
     text-decoration-color: var(--rojo);
     text-underline-offset: 4px;
 }
@@ -181,6 +231,7 @@ h2 {
 .nota-numero,
 .nota-formulario {
     font-size: 0.85rem;
+    text-align: center;
 }
 
 .nota-numero {
@@ -196,6 +247,7 @@ form {
     padding: 0.75rem;
     border: 1px solid var(--rojo);
     color: var(--texto);
+    text-align: center;
 }
 
 .notificacion.exito {
@@ -206,6 +258,7 @@ label {
     margin-top: 0.35rem;
     font-size: 0.9rem;
     font-weight: 700;
+    text-align: center;
 }
 
 input,
@@ -217,20 +270,23 @@ textarea {
     background: rgba(15, 13, 12, 0.75);
     color: var(--texto);
     font: inherit;
+    text-align: center;
 }
 
 input:focus,
 textarea:focus {
     border-color: var(--rojo);
     outline: 2px solid rgba(213, 43, 50, 0.3);
+    outline-offset: 1px;
 }
 
 textarea {
     resize: vertical;
+    border-radius: 16px;
 }
 
 button {
-    justify-self: start;
+    justify-self: center;
     margin-top: 0.5rem;
     padding: 0.75rem 1.2rem;
     border: 0;
@@ -248,10 +304,12 @@ button:hover {
 
 .nota-formulario {
     margin-top: 0.75rem;
+    line-height: 1.5;
 }
 
 @media (max-width: 700px) {
     .encabezado {
+        width: min(100% - 1rem, 1100px);
         min-height: 68px;
         align-items: flex-start;
         flex-direction: column;
@@ -262,7 +320,7 @@ button:hover {
 
     .navegacion {
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem 1rem;
     }
 
     .navegacion a {
@@ -279,7 +337,7 @@ button:hover {
 
     .contacto-detalles {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1.25rem;
     }
 }
 
@@ -307,7 +365,7 @@ button:hover {
 
     .contacto {
         width: min(100% - 1rem, 1000px);
-        padding: 2.5rem 0 4rem;
+        padding: 2rem 0 3rem;
     }
 
     .presentacion {
@@ -316,6 +374,16 @@ button:hover {
 
     .presentacion h1 {
         font-size: clamp(2.1rem, 15vw, 3rem);
+    }
+
+    .ubicacion,
+    .preguntas,
+    .datos-contacto {
+        padding: 1rem;
+    }
+
+    .ubicacion {
+        margin-bottom: 1.25rem;
     }
 
     .encabezado-seccion h2 {
@@ -335,6 +403,7 @@ button:hover {
     textarea,
     button {
         width: 100%;
+        border-radius: 16px;
     }
 
     button {
@@ -342,7 +411,7 @@ button:hover {
     }
 
     .ubicacion {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.25rem;
     }
 }
 

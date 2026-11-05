@@ -6,13 +6,16 @@ const albumArtist = document.getElementById("album-artist");
 const albumPrice = document.getElementById("album-price");
 const addToCartBtn = document.getElementById("add-to-cart");
 const cartCount = document.getElementById("cart-count");
+const carouselIndicador = document.getElementById("carousel-indicador");
 const etiquetaDescuentoMiembro = document.getElementById("etiqueta-descuento-miembro");
+const stockProducto = document.getElementById("stock-producto");
 const porcentajeDescuentoMiembro = Number(document.body.dataset.descuentoMiembro || 0);
 
 let currentIndex = 0;
 
 const CLAVE_CARRITO = "popstar-carrito";
 
+// Recupera los productos guardados en el almacenamiento local.
 function leerCarrito() {
     try {
         return JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
@@ -21,6 +24,7 @@ function leerCarrito() {
     }
 }
 
+// Guarda el carrito actualizado en el almacenamiento local.
 function guardarCarrito(carrito) {
     try {
         localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
@@ -30,19 +34,27 @@ function guardarCarrito(carrito) {
 
 let carrito = leerCarrito();
 
+function mismoDisco(item, producto) {
+    return item.id === producto.id
+        || (item.titulo === producto.titulo && item.artista === producto.artista);
+}
+
+// Calcula y muestra la cantidad total de productos en el carrito.
 function actualizarContador() {
     cartCount.textContent = carrito.reduce((suma, p) => suma + p.cantidad, 0);
 }
 
+// Crea una portada interactiva por cada producto disponible.
 productos.forEach((producto, i) => {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `<img src="${producto.imagen}" alt="${producto.titulo} - ${producto.artista}">`;
+    // Permite seleccionar directamente una portada del carrusel.
     card.addEventListener("click", () => irA(i));
     carousel.appendChild(card);
-
 });
 
+// Acomoda las portadas y actualiza la información del álbum seleccionado.
 function updateCarousel() {
     const cards = document.querySelectorAll(".card");
     const total = productos.length;
@@ -67,6 +79,7 @@ function updateCarousel() {
     });
 
     const actual = productos[currentIndex];
+    carouselIndicador.textContent = `${currentIndex + 1} / ${total}`;
     albumTitle.textContent = actual.titulo;
     albumArtist.textContent = actual.artista;
     if (porcentajeDescuentoMiembro > 0) {
@@ -77,37 +90,52 @@ function updateCarousel() {
         albumPrice.textContent = `$${actual.precio} MXN`;
         etiquetaDescuentoMiembro.hidden = true;
     }
+    const enCarrito = carrito.find((producto) => mismoDisco(producto, actual))?.cantidad || 0;
+    stockProducto.textContent = actual.stock > 0 ? `Existencias: ${actual.stock}` : "AGOTADO";
+    addToCartBtn.disabled = actual.stock < 1 || enCarrito >= actual.stock;
 }
 
+// Cambia el álbum activo y mantiene el índice dentro de los límites.
 function irA(i) {
     currentIndex = (i + productos.length) % productos.length;
     updateCarousel();
 }
 
+// Mueve el carrusel al álbum anterior o siguiente.
 prevBtn.addEventListener("click", () => irA(currentIndex - 1));
 nextBtn.addEventListener("click", () => irA(currentIndex + 1));
 
+// Permite navegar el carrusel con las flechas del teclado.
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") irA(currentIndex - 1);
     if (e.key === "ArrowRight") irA(currentIndex + 1);
 });
 
+// Añade el álbum seleccionado al carrito e inicia la animación.
 addToCartBtn.addEventListener("click", () => {
     const actual = productos[currentIndex];
-    const enCarrito = carrito.find((p) => p.titulo === actual.titulo);
+    const enCarrito = carrito.find((p) => mismoDisco(p, actual));
 
     if (enCarrito) {
+        if (enCarrito.cantidad >= actual.stock) {
+            addToCartBtn.disabled = true;
+            stockProducto.textContent = "Alcanzaste las existencias disponibles de este disco.";
+            return;
+        }
+        Object.assign(enCarrito, actual);
         enCarrito.cantidad++;
     } else {
         carrito.push({ ...actual, cantidad: 1 });
     }
 
     guardarCarrito(carrito);
+    updateCarousel();
 
     const portada = document.querySelector(".card.active img");
     animarAlCarrito(portada, actualizarContador);
 });
 
+// Anima la portada hacia el carrito y actualiza el contador al terminar.
 function animarAlCarrito(portada, alTerminar) {
     const icono = cartCount.parentElement;
     const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -147,6 +175,7 @@ function animarAlCarrito(portada, alTerminar) {
     );
 
     let terminado = false;
+    // Completa la animación y actualiza el carrito una sola vez.
     const aterrizar = () => {
         if (terminado) return;
         terminado = true;
@@ -159,12 +188,14 @@ function animarAlCarrito(portada, alTerminar) {
     setTimeout(aterrizar, 1000);
 }
 
+// Reinicia y reproduce la animación visual del icono del carrito.
 function rebotarCarrito(icono) {
     icono.classList.remove("rebote");
     void icono.offsetWidth;
     icono.classList.add("rebote");
 }
 
+// Recalcula la distribución cuando cambia el tamaño de pantalla.
 window.addEventListener("resize", updateCarousel);
 
 actualizarContador();

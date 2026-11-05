@@ -7,6 +7,7 @@ const contenido = document.getElementById("carrito-contenido");
 const carritoVacio = document.getElementById("carrito-vacio");
 const compraExitosa = document.getElementById("compra-exitosa");
 const cartCount = document.getElementById("cart-count");
+const mensajeCarrito = document.getElementById("mensaje-carrito");
 
 const totalProductos = document.getElementById("total-productos");
 const resumenArticulos = document.getElementById("resumen-articulos");
@@ -36,7 +37,25 @@ function guardarCarrito() {
     }
 }
 
-let carrito = leerCarrito();
+let carrito = leerCarrito().map((articulo) => {
+    const productoCatalogo = productos.find((producto) =>
+        producto.id === Number(articulo.id)
+        || (producto.titulo === articulo.titulo && producto.artista === articulo.artista)
+    );
+    return productoCatalogo
+        ? { ...productoCatalogo, cantidad: Math.max(1, Math.floor(Number(articulo.cantidad) || 1)) }
+        : { ...articulo, id: Number(articulo.id) || 0, cantidad: Math.max(1, Math.floor(Number(articulo.cantidad) || 1)) };
+});
+
+function mostrarMensajeCarrito(mensaje) {
+    mensajeCarrito.textContent = mensaje;
+    mensajeCarrito.hidden = false;
+}
+
+function ocultarMensajeCarrito() {
+    mensajeCarrito.textContent = "";
+    mensajeCarrito.hidden = true;
+}
 
 function formatoPrecio(cantidad) {
     return `$${cantidad.toLocaleString("es-MX")} MXN`;
@@ -64,6 +83,7 @@ function crearProducto(producto, i) {
                 <h3></h3>
                 <p class="artista"></p>
                 <p class="formato">Vinilo | Nuevo</p>
+                <p class="stock-articulo"></p>
             </div>
         </div>
 
@@ -84,12 +104,17 @@ function crearProducto(producto, i) {
 
     li.querySelector("h3").textContent = producto.titulo;
     li.querySelector(".artista").textContent = tipoTitulo(producto.artista);
+    li.querySelector(".stock-articulo").textContent = producto.stock > 0
+        ? `Existencias: ${producto.stock}`
+        : "AGOTADO";
     li.querySelector(".precio").textContent = formatoPrecio(precioConDescuento(producto.precio));
     li.querySelector(".cantidad span").textContent = producto.cantidad;
     li.querySelector(".subtotal").textContent = formatoPrecio(precioConDescuento(producto.precio) * producto.cantidad);
 
     li.querySelector(".menos").addEventListener("click", () => cambiarCantidad(i, -1));
-    li.querySelector(".mas").addEventListener("click", () => cambiarCantidad(i, 1));
+    const botonMas = li.querySelector(".mas");
+    botonMas.disabled = producto.cantidad >= producto.stock;
+    botonMas.addEventListener("click", () => cambiarCantidad(i, 1));
     li.querySelector(".btn-eliminar").addEventListener("click", () => eliminarProducto(i));
 
     return li;
@@ -119,11 +144,23 @@ function crearRecomendado(producto) {
     li.querySelector("h3").title = producto.titulo;
     li.querySelector(".artista").textContent = tipoTitulo(producto.artista);
     li.querySelector(".precio-reco").textContent = formatoPrecio(precioConDescuento(producto.precio));
+    const enCarrito = carrito.find((articulo) => articulo.id === producto.id)?.cantidad || 0;
+    const stock = document.createElement("p");
+    stock.className = "stock-recomendado";
+    stock.textContent = producto.stock > 0 ? `Existencias: ${producto.stock}` : "AGOTADO";
+    li.querySelector(".recomendado-texto").appendChild(stock);
 
-    li.querySelector(".btn-agregar").addEventListener("click", (e) => {
-        e.currentTarget.disabled = true;
+    const botonAgregar = li.querySelector(".btn-agregar");
+    botonAgregar.disabled = producto.stock < 1 || enCarrito >= producto.stock;
+    botonAgregar.addEventListener("click", (e) => {
         li.classList.add("saliendo");
-        agregarProducto(producto);
+        if (!agregarProducto(producto)) {
+            li.classList.remove("saliendo");
+            botonAgregar.disabled = true;
+            mostrarMensajeCarrito("No hay más existencias disponibles de ese disco.");
+            return;
+        }
+        e.currentTarget.disabled = true;
         animarAlCarrito(img, mostrarCarrito);
     });
 
@@ -168,7 +205,7 @@ function mostrarCarrito() {
 
 function mostrarRecomendados() {
     const recomendados = productos.filter(
-        (producto) => !carrito.some((p) => p.titulo === producto.titulo)
+        (producto) => !carrito.some((p) => p.id === producto.id && p.cantidad >= producto.stock)
     );
 
     listaRecomendados.innerHTML = "";
@@ -178,15 +215,18 @@ function mostrarRecomendados() {
 }
 
 function agregarProducto(producto) {
-    const enCarrito = carrito.find((p) => p.titulo === producto.titulo);
+    const enCarrito = carrito.find((p) => p.id === producto.id);
 
     if (enCarrito) {
+        if (enCarrito.cantidad >= producto.stock) return false;
         enCarrito.cantidad++;
     } else {
+        if (producto.stock < 1) return false;
         carrito.push({ ...producto, cantidad: 1 });
     }
 
     guardarCarrito();
+    return true;
 }
 
 function animarAlCarrito(portada, alTerminar) {
@@ -242,6 +282,11 @@ function rebotarCarrito(icono) {
 }
 
 function cambiarCantidad(i, cambio) {
+    if (cambio > 0 && carrito[i].cantidad >= carrito[i].stock) {
+        mostrarMensajeCarrito("No puedes agregar más unidades: alcanzaste las existencias disponibles.");
+        return;
+    }
+
     carrito[i].cantidad += cambio;
 
     if (carrito[i].cantidad <= 0) {
@@ -258,12 +303,51 @@ function eliminarProducto(i) {
     mostrarCarrito();
 }
 
-finalizarBtn.addEventListener("click", () => {
-    carrito = [];
-    guardarCarrito();
+finalizarBtn.addEventListener("click", async () => {
+    ocultarMensajeCarrito();
+    finalizarBtn.disabled = true;
 
-    compraExitosa.classList.remove("oculto");
-    mostrarCarrito();
+    try {
+        const respuesta = await fetch("./registrar-compra.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-Token": document.body.dataset.csrfCarrito,
+            },
+            body: JSON.stringify({
+                articulos: carrito.map((articulo) => ({
+                    id: Number(articulo.id),
+                    cantidad: Number(articulo.cantidad),
+                })),
+            }),
+        });
+        const datos = await respuesta.json().catch(() => ({}));
+
+        if (datos.stocks) {
+            Object.entries(datos.stocks).forEach(([id, stock]) => {
+                const producto = productos.find((articulo) => articulo.id === Number(id));
+                if (producto) producto.stock = Number(stock);
+            });
+            carrito = carrito.map((articulo) => ({
+                ...articulo,
+                stock: productos.find((producto) => producto.id === articulo.id)?.stock ?? articulo.stock,
+            }));
+        }
+
+        if (!respuesta.ok || !Number.isInteger(datos.pedido)) {
+            throw new Error(datos.error || "No se pudo confirmar el pedido.");
+        }
+
+        carrito = [];
+        guardarCarrito();
+        compraExitosa.classList.remove("oculto");
+        mostrarCarrito();
+    } catch (error) {
+        mostrarMensajeCarrito(error.message || "No se pudo confirmar el pedido. Inténtalo de nuevo.");
+        mostrarCarrito();
+    } finally {
+        finalizarBtn.disabled = false;
+    }
 });
 
 function moverRecomendados(direccion) {

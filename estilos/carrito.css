@@ -1,6 +1,6 @@
 :root {
     --rojo: #d52b32;
-    --rojo-claro: #ff3b42;
+    --rojo-claro: #ff6268;
     --blanco: #ffffff;
     --gris: #b9b9b9;
     --gris-oscuro: #7a7a7a;
@@ -28,7 +28,7 @@ body {
     background-color: #0a0000;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.75)),
-        url("../imagenes/carritoI.webp");
+        url("../imagenes/tienda.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ ul {
     z-index: 1000;
     object-fit: cover;
     border: 2px solid var(--rojo);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 30px rgba(213, 43, 50, 0.7);
     pointer-events: none;
 }
 
@@ -277,6 +277,19 @@ main {
     align-items: start;
 }
 
+.mensaje-carrito {
+    grid-column: 1 / -1;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--rojo);
+    color: var(--blanco);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.mensaje-carrito[hidden] {
+    display: none;
+}
+
 .carrito-lista {
     padding: 18px 22px 24px;
 }
@@ -377,6 +390,13 @@ main {
     color: var(--gris-oscuro);
 }
 
+.stock-articulo,
+.stock-recomendado {
+    margin-top: 5px;
+    color: var(--gris);
+    font-size: 0.68rem;
+}
+
 .precio {
     text-align: center;
     font-size: 0.8rem;
@@ -404,6 +424,12 @@ main {
 
 .cantidad button:hover {
     background: var(--rojo);
+}
+
+.cantidad button:disabled,
+.btn-agregar:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
 }
 
 .cantidad span {

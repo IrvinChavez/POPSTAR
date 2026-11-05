@@ -1,8 +1,15 @@
 const modalCuenta = document.getElementById("modal-cuenta");
 const pestanasCuenta = document.querySelectorAll("[data-pestana]");
 
+document.querySelectorAll("[data-cerrar-aviso]").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const aviso = document.getElementById(boton.dataset.cerrarAviso);
+        if (aviso) aviso.hidden = true;
+    });
+});
+
 function seleccionarPestanaCuenta(nombre) {
-    const formularios = document.querySelectorAll(".modal-cuenta__formulario");
+    const formularios = document.querySelectorAll(".modal-cuenta__formulario[data-panel]");
     const formularioSeleccionado = Array.from(formularios).find(
         (formulario) => formulario.dataset.panel === nombre
     );

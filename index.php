@@ -8,7 +8,8 @@
 
     <title>POPSATR</title>
 
-    <link rel="stylesheet" href="./estilos/index.css">
+    <link rel="stylesheet" href="./estilos/index.css?v=2">
+    <link rel="stylesheet" href="./estilos/transiciones.css?v=1">
 </head>
 
 <body>
@@ -27,6 +28,10 @@
 
                 <span>•</span>
 
+                <a href="./quiz.php">QUIZ</a>
+
+                <span>•</span>
+
                 <a href="./contacto.php">CONTACTO</a>
 
             </nav>
@@ -35,6 +40,7 @@
 
     </main>
 
+    <script src="./js/transiciones.js?v=1"></script>
 </body>
 
 </html>
