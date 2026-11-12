@@ -113,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion_cuenta'])) {
             'correo' => $correoCuenta,
             'telefono' => $telefonoCuenta,
             'acepta_promociones' => true,
+            'rol' => 'cliente',
         ];
         $_SESSION['csrf_cuenta'] = bin2hex(random_bytes(32));
         $_SESSION['mensaje_cuenta'] = ['tipo' => 'exito', 'texto' => '¡Tu cuenta está lista! Ya tienes 10% de descuento en discos.'];
@@ -126,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion_cuenta'])) {
         }
 
         $consulta = $conexion->prepare(
-            'SELECT id, nombre, correo, contrasena_hash, telefono, acepta_promociones
+            'SELECT id, nombre, correo, contrasena_hash, telefono, acepta_promociones, rol
              FROM usuarios_popstar
              WHERE correo = :correo'
         );
@@ -144,6 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion_cuenta'])) {
             'correo' => $usuarioCuenta['correo'],
             'telefono' => $usuarioCuenta['telefono'] ?? '',
             'acepta_promociones' => (bool) $usuarioCuenta['acepta_promociones'],
+            'rol' => $usuarioCuenta['rol'],
         ];
         $_SESSION['csrf_cuenta'] = bin2hex(random_bytes(32));
         $_SESSION['mensaje_cuenta'] = ['tipo' => 'exito', 'texto' => '¡Bienvenido de nuevo! Tu 10% de descuento está activo.'];
@@ -243,6 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion_cuenta'])) {
                 'correo' => $correoCuenta,
                 'telefono' => $telefonoCuenta,
                 'acepta_promociones' => $aceptaPromociones,
+                'rol' => $cuentaActual['rol'] ?? 'cliente',
             ];
             $_SESSION['csrf_cuenta'] = bin2hex(random_bytes(32));
             $_SESSION['mensaje_cuenta'] = ['tipo' => 'exito', 'texto' => 'Los datos de tu cuenta se actualizaron correctamente.'];

@@ -2,7 +2,7 @@
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../imagenes/inicio.webp");
+    background-image: url("../imagenes/imagen.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,6 +88,9 @@ body {
 }
 
 @media (max-width: 600px) {
+        body {
+        background-image: url("../imagenes/movil.webp");
+    }
     .general {
         display: flex;
         align-items: center;
@@ -103,7 +106,7 @@ body {
     }
 
     .contenido h1 {
-        font-size: clamp(2.8rem, 18vw, 5rem);
+        font-size: clamp(2.2rem, 14vw, 4rem);
         letter-spacing: 2px;
         margin-bottom: 1.5rem;
     }

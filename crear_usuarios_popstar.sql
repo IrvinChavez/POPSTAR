@@ -11,12 +11,29 @@ CREATE TABLE IF NOT EXISTS usuarios_popstar (
     contrasena_hash VARCHAR(255) NOT NULL,
     telefono VARCHAR(30) NULL,
     acepta_promociones TINYINT(1) NOT NULL DEFAULT 0,
+    rol ENUM('cliente', 'empleado', 'administrador') NOT NULL DEFAULT 'cliente',
     creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     UNIQUE KEY usuarios_popstar_correo_unico (correo)
 ) ENGINE=InnoDB
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
+
+SET @popstar_rol_existe = (
+    SELECT COUNT(*)
+    FROM INFORMATION_SCHEMA.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+      AND TABLE_NAME = 'usuarios_popstar'
+      AND COLUMN_NAME = 'rol'
+);
+SET @popstar_sql = IF(
+    @popstar_rol_existe = 0,
+    'ALTER TABLE usuarios_popstar ADD COLUMN rol ENUM(''cliente'', ''empleado'', ''administrador'') NOT NULL DEFAULT ''cliente''',
+    'SELECT 1'
+);
+PREPARE popstar_migracion FROM @popstar_sql;
+EXECUTE popstar_migracion;
+DEALLOCATE PREPARE popstar_migracion;
 
 CREATE TABLE IF NOT EXISTS resultados_quiz (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -41,6 +58,7 @@ CREATE TABLE IF NOT EXISTS catalogo_discos (
     precio DECIMAL(10,2) UNSIGNED NOT NULL,
     imagen VARCHAR(1024) NOT NULL,
     stock INT UNSIGNED NOT NULL DEFAULT 5,
+    activo TINYINT(1) NOT NULL DEFAULT 1,
     creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     UNIQUE KEY catalogo_discos_codigo_unico (codigo),
@@ -48,6 +66,22 @@ CREATE TABLE IF NOT EXISTS catalogo_discos (
 ) ENGINE=InnoDB
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
+
+SET @popstar_activo_existe = (
+    SELECT COUNT(*)
+    FROM INFORMATION_SCHEMA.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+      AND TABLE_NAME = 'catalogo_discos'
+      AND COLUMN_NAME = 'activo'
+);
+SET @popstar_sql = IF(
+    @popstar_activo_existe = 0,
+    'ALTER TABLE catalogo_discos ADD COLUMN activo TINYINT(1) NOT NULL DEFAULT 1',
+    'SELECT 1'
+);
+PREPARE popstar_migracion FROM @popstar_sql;
+EXECUTE popstar_migracion;
+DEALLOCATE PREPARE popstar_migracion;
 
 CREATE TABLE IF NOT EXISTS ordenes (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,

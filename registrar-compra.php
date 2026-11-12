@@ -49,7 +49,7 @@ try {
     $seleccionarDisco = $conexion->prepare(
         'SELECT id, titulo, artista, precio, stock
          FROM catalogo_discos
-         WHERE id = :id
+         WHERE id = :id AND activo = 1
          FOR UPDATE'
     );
     $discosOrden = [];

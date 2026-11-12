@@ -1,0 +1,267 @@
+.panel-gestion {
+    width: min(1120px, 92%);
+    margin: 2rem auto 5rem;
+}
+
+.panel-gestion > h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.gestion-seccion {
+    margin-top: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.gestion-seccion h2,
+.gestion-seccion h3 {
+    margin-bottom: 1rem;
+}
+
+.gestion-ayuda {
+    margin-bottom: 1rem;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+}
+
+.gestion-ayuda code {
+    color: #ffb2b5;
+}
+
+.gestion-formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    align-items: end;
+}
+
+.gestion-formulario label {
+    display: grid;
+    gap: 0.4rem;
+    color: #eee;
+    font-size: 0.85rem;
+}
+
+.gestion-formulario input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.7rem;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #fff;
+    color: #171717;
+    font: inherit;
+}
+
+.gestion-formulario button,
+.gestion-estado button {
+    min-height: 42px;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 6px;
+    background: #d52b32;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+}
+
+.gestion-formulario button:hover,
+.gestion-estado button:hover {
+    background: #a61f26;
+}
+
+.gestion-mensaje {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 6px;
+    background: rgba(32, 132, 75, 0.85);
+}
+
+.gestion-mensaje.error {
+    background: rgba(143, 18, 25, 0.92);
+}
+
+.gestion-empleados {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.gestion-empleados li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.gestion-disco {
+    margin-top: 0.65rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+}
+
+.gestion-filtros {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
+    gap: 0.55rem 1rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.gestion-filtros label {
+    color: #eee;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.gestion-filtros input,
+.gestion-filtros select {
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #fff;
+    color: #171717;
+    font: inherit;
+}
+
+.gestion-filtros .gestion-ayuda {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.gestion-sin-resultados {
+    padding: 1rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #eee;
+}
+
+.gestion-paginacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.gestion-paginacion__numeros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.gestion-paginacion[hidden] {
+    display: none;
+}
+
+.gestion-paginacion button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 6px;
+    background: #d52b32;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gestion-paginacion > button {
+    min-width: 120px;
+}
+
+.gestion-paginacion button:hover:not(:disabled) {
+    background: #a61f26;
+}
+
+.gestion-paginacion__numeros button[aria-current="page"] {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    background: #8f1219;
+}
+
+.gestion-paginacion button:disabled {
+    background: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.gestion-paginacion span {
+    color: #eee;
+    font-weight: 600;
+}
+
+.gestion-disco--retirado {
+    opacity: 0.72;
+}
+
+.gestion-disco__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0;
+}
+
+.gestion-disco__titulo span {
+    color: #ffb2b5;
+}
+
+.gestion-edicion {
+    margin-top: 0.75rem;
+}
+
+.gestion-edicion summary {
+    width: fit-content;
+    color: #ffb2b5;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gestion-edicion[open] summary {
+    margin-bottom: 1rem;
+}
+
+.gestion-estado {
+    margin-top: 0.75rem;
+}
+
+.gestion-estado .gestion-boton--peligro {
+    background: #555;
+}
+
+@media (max-width: 560px) {
+    .panel-gestion {
+        width: 94%;
+        margin-top: 1rem;
+    }
+
+    .gestion-empleados li {
+        flex-direction: column;
+    }
+
+    .gestion-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .gestion-filtros .gestion-ayuda {
+        grid-column: auto;
+    }
+}

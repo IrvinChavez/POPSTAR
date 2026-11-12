@@ -31,6 +31,9 @@
             <section class="modal-cuenta__cuenta" aria-label="Tu cuenta">
                 <h2>Administra tu cuenta</h2>
                 <p class="modal-cuenta__pie">Tu descuento de miembro del 10% está activo en la tienda y el carrito.</p>
+                <?php if (in_array($cuentaActual['rol'] ?? '', ['administrador', 'empleado'], true)): ?>
+                    <p><a class="modal-cuenta__ver-catalogo" href="./admin.php">ABRIR PANEL DE GESTIÓN</a></p>
+                <?php endif; ?>
                 <?php
                 $nombresPerfiles = [
                     'indie' => 'Indie introspectivo',

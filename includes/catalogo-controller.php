@@ -37,6 +37,7 @@ if ((int) $consultaCodigos->fetchColumn() !== count($catalogoSemilla)) {
 $productosCatalogo = $conexion->query(
     'SELECT id, codigo, titulo, artista, precio, imagen, stock
      FROM catalogo_discos
+     WHERE activo = 1
      ORDER BY id'
 )->fetchAll();
 $jsonProductosCatalogo = json_encode(

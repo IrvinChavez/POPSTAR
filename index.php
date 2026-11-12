@@ -16,10 +16,10 @@
     <main class="general">
         <section id="inicio" class="contenido">
 
-            <h1><span>✦</span> POPSTAR<span>✦</span></h1>
+            <h1><span>✦</span>POPSTAR<span>✦</span></h1>
 
             <nav class="navegacion">
-
+                
                 <a href="./index.php">INICIO</a>
 
                 <span>•</span>
