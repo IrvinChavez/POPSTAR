@@ -118,3 +118,15 @@ CREATE TABLE IF NOT EXISTS ordenes_discos (
 ) ENGINE=InnoDB
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS mensajes_contacto (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(120) NOT NULL,
+    correo VARCHAR(254) NOT NULL,
+    mensaje TEXT NOT NULL,
+    creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    KEY mensajes_contacto_fecha (creado_en)
+) ENGINE=InnoDB
+  DEFAULT CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
