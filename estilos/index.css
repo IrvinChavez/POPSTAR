@@ -90,6 +90,11 @@ body {
 @media (max-width: 600px) {
         body {
         background-image: url("https://drive.google.com/thumbnail?id=12S2R4cmTy02Zn8Ibb90LM8zEJVrw2TWY&sz=w2000");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+
     }
     .general {
         display: flex;
