@@ -2,7 +2,7 @@
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../imagenes/imagen.webp");
+    background-image: url("https://drive.google.com/thumbnail?id=1X3FkcOsELNsNgtX_P4ZbOliBnFUNRAKw&sz=w2000");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@ body {
 
 @media (max-width: 600px) {
         body {
-        background-image: url("../imagenes/movil.webp");
+        background-image: url("https://drive.google.com/thumbnail?id=12S2R4cmTy02Zn8Ibb90LM8zEJVrw2TWY&sz=w2000");
     }
     .general {
         display: flex;
